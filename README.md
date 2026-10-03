@@ -12,6 +12,16 @@ Analiza tres archivos aportados por el usuario: producción mensual por activo, 
 - **Repositorio:** https://github.com/residenterick681/proyecto_final_Dashboard_EDA
 - **Texto listo para el aula:** [texto_entrega.txt](docs/texto_entrega.txt).
 
+## Versión para Power BI
+
+En [powerbi/](powerbi/) se entrega **Petroleo_EDA.pbip**, con cinco tablas relacionadas, 21 medidas DAX y tres páginas: panorama, calidad y detalle auditable. Extrae o descarga la carpeta completa, abre el `.pbip` con Power BI Desktop y pulsa **Inicio > Actualizar** para cargar los datos incorporados. Después puedes guardar una copia `.pbix` desde Desktop.
+
+No requiere rutas a los archivos originales ni credenciales: las consultas M contienen una copia de los datos depurados. Los precios mensuales están separados de la producción para evitar duplicar su promedio por activo. Incluye las alertas de calidad, n por grupo, CSV de respaldo, [medidas DAX](powerbi/Medidas_DAX.txt) e [instrucciones](powerbi/LEEME_POWER_BI.txt).
+
+Para regenerarlo tras ejecutar el análisis: `python -m src.export_powerbi`. Este comando sobrescribe la definición generada; guarda por separado cualquier personalización hecha en Power BI. Los CSV de respaldo no son una conexión automática al modelo.
+
+Se verificaron los datos, las referencias, los esquemas PBIP/PBIR y la deserialización del modelo mediante las bibliotecas de Microsoft instaladas. **La apertura, actualización DAX y presentación en Power BI Desktop quedan pendientes de comprobación en la aplicación.** El proyecto se entrega sin caché binaria; por eso necesita una primera actualización.
+
 ## Problema, pregunta y usuario
 
 Un analista de planificación y supervisión de producción necesita distinguir cambios productivos de diferencias de cobertura, duración de los meses y errores de registro.

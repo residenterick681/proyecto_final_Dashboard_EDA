@@ -1,0 +1,83 @@
+﻿// Suma del volumen disponible. Los faltantes no se sustituyen por cero.
+Crudo observado (bbl) =
+SUM(Produccion[Crudo_bbl])
+
+// Unidad adoptada del diccionario del proyecto; no es crudo equivalente.
+Gas observado (miles pies3) =
+SUM(Produccion[Gas_miles_pies3])
+
+// Filas unicas activo-mes en el contexto filtrado.
+N registros =
+COUNTROWS(Produccion)
+
+// Numero de observaciones mensuales no vacias de crudo; por activo equivale al n del grupo.
+N crudo =
+COUNT(Produccion[Crudo_bbl])
+
+// Numero de observaciones mensuales no vacias de gas.
+N gas =
+COUNT(Produccion[Gas_miles_pies3])
+
+// Dias de los meses seleccionados dentro de enero 2022-agosto 2026, contados una sola vez. Un activo con cobertura incompleta conserva el denominador del periodo.
+Dias del periodo productivo =
+CALCULATE(SUM(Calendario[Dias_mes]), KEEPFILTERS(Calendario[Con_produccion] = 1))
+
+// Volumen observado / dias del periodo. No es la media simple de las tasas ni un ajuste de faltantes; revisar n y cobertura al comparar activos.
+Aporte diario observado (bbl) =
+DIVIDE([Crudo observado (bbl)], [Dias del periodo productivo])
+
+// Media simple entre meses con precio; no se repite por activo, no se pondera por produccion y no equivale a ingresos.
+Precio promedio (USD/bbl) =
+AVERAGE(Precios[Precio_USD_bbl])
+
+// Numero de precios mensuales validos en el periodo.
+N meses con precio =
+COUNT(Precios[Precio_USD_bbl])
+
+// Meses de la ventana productiva sin precio: agosto de 2026 en la fuente disponible.
+Meses productivos sin precio =
+CALCULATE(COUNTROWS(Calendario), KEEPFILTERS(Calendario[Con_produccion] = 1), KEEPFILTERS(Calendario[Con_precio] = 0))
+
+// Activos con al menos un registro dentro de la seleccion.
+Activos observados =
+DISTINCTCOUNT(Produccion[Activo])
+
+// Celdas de crudo anuladas por valores discrepantes de una misma clave.
+Conflictos crudo =
+SUM(Produccion[Conflicto_crudo])
+
+// Celdas de gas anuladas por valores discrepantes de una misma clave.
+Conflictos gas =
+SUM(Produccion[Conflicto_gas])
+
+// Cuenta de celdas conflictivas, no de filas duplicadas.
+Conflictos totales =
+[Conflictos crudo] + [Conflictos gas]
+
+// Banderas IQR calculadas previamente dentro de cada activo. Se conservan los registros.
+Atipicos crudo =
+SUM(Produccion[Atipico_crudo])
+
+// Banderas IQR del gas diario dentro de cada activo; el filtro no recalcula los limites historicos.
+Atipicos gas =
+SUM(Produccion[Atipico_gas])
+
+// Meses ausentes entre el primer y ultimo registro de cada activo; no son volumen cero.
+Huecos internos =
+CALCULATE(COUNTROWS(Cobertura), KEEPFILTERS(Cobertura[Estado] = "sin registro interior"))
+
+// Umbral descriptivo de doce meses para advertir series cortas; no garantiza independencia ni suficiencia estadistica.
+Estado del grupo =
+VAR N = [N crudo] RETURN IF(ISBLANK(N) || N = 0, "Sin crudo valido", IF(N < 12, "PRECAUCION: n < 12", "n >= 12; revisar cobertura"))
+
+// Numero de activos seleccionados con entre uno y once meses validos de crudo.
+Grupos pequenos =
+SUMX(VALUES(Activos[Activo]), VAR N = CALCULATE([N crudo]) RETURN IF(N > 0 && N < 12, 1, 0))
+
+// Advertencia dinamica segun filtros. Observaciones mensuales, no muestras independientes.
+Advertencia de grupos =
+VAR G = [Grupos pequenos] RETURN IF(ISBLANK([N crudo]) || [N crudo] = 0, "Sin datos de crudo en esta seleccion", IF(G > 0, FORMAT(G, "0") & " grupo(s) con n < 12. Interpretar con cautela.", "Revisar cobertura, faltantes y cambios de composicion."))
+
+// Fraccion del crudo observado entre los activos seleccionados, manteniendo el periodo.
+Participacion crudo =
+DIVIDE([Crudo observado (bbl)], CALCULATE([Crudo observado (bbl)], ALLSELECTED(Activos)))

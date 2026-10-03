@@ -1,0 +1,45 @@
+﻿PROYECTO POWER BI · PETRÓLEO Y GAS
+Autor: Erick Leandro Ruano Lara
+
+ABRIR Y ANALIZAR
+1. Extrae TODO el ZIP en una carpeta local. Conserva juntas las carpetas .Report y .SemanticModel.
+2. Abre Petroleo_EDA.pbip con Power BI Desktop actualizado. También puedes abrir Petroleo_EDA.Report/definition.pbir.
+3. Pulsa Inicio > Actualizar para cargar los datos incorporados. El proyecto PBIP no incluye caché binaria; los visuales necesitan esta primera actualización.
+4. Analiza las páginas Panorama, Calidad y Detalle. Panorama inicia en 2026; las otras páginas muestran el historial. Los filtros de cada página son independientes.
+5. Si deseas UN SOLO ARCHIVO, después de actualizar utiliza Archivo > Guardar como > archivo .pbix. No renombres la extensión .pbip a .pbix.
+Si tu versión solicita habilitar proyectos PBIP en Opciones > Características de versión preliminar, habilita esa opción y reinicia Desktop.
+
+QUÉ INCLUYE
+Cinco tablas importadas, cinco relaciones uno a varios y medidas DAX. Los datos están incorporados en las consultas M como CSV UTF-8 codificado en Base64: no hay rutas absolutas, credenciales ni descargas necesarias para actualizarlos.
+Los CSV de datos/ y las consultas de consultas_m/ son copias legibles de respaldo. Modificar un CSV no actualiza automáticamente el modelo: para cambiar los datos, regenera desde el repositorio con python -m src.export_powerbi o edita la consulta M correspondiente.
+
+MODELO
+Calendario[Mes] 1 -> * Produccion[Mes]
+Activos[Activo] 1 -> * Produccion[Activo]
+Calendario[Mes] 1 -> * Precios[Mes]
+Calendario[Mes] 1 -> * Cobertura[Mes]
+Activos[Activo] 1 -> * Cobertura[Activo]
+Todas las relaciones filtran en una sola dirección, desde la dimensión. El activo no filtra la tabla de precios porque el precio de referencia no es específico por activo. Calendario tiene granularidad mensual; no se marca como calendario diario ni se usa DATEADD sobre una serie diaria inexistente.
+
+INTERPRETACIÓN
+Crudo en barriles mensuales; gas en miles de pies cúbicos mensuales, según la convención documentada en el proyecto. Precio en USD por barril. No se interpreta precio por producción como ingresos.
+Aporte diario observado = volumen disponible / días de los meses seleccionados dentro de enero 2022–agosto 2026. Los días no se repiten por activo. Con huecos o cobertura parcial, este aporte no estima la producción faltante; consulta n y Calidad.
+Los n son observaciones activo-mes válidas. Menos de 12 meses activa una precaución descriptiva, no una prueba estadística. El total de N crudo suma activo-mes; no son meses calendario distintos.
+No se unió AB16 con AIT. Un mes ausente no es cero. Se conservan ceros legítimos. Tres celdas en conflicto se dejan vacías. Los atípicos se conservan y sus límites IQR históricos no se recalculan al filtrar.
+Las series agregadas pueden cambiar porque cambia la composición de activos. Las comparaciones causales o interanuales requieren cobertura y activos comunes; véase el informe EDA original.
+
+CONTROL ESPERADO
+Historial: Produccion 789 filas; Precios 67; Activos 16; Calendario 68; Cobertura 896.
+Crudo válido: 788; gas válido: 787. Conflictos: 1 crudo y 2 gas. Huecos internos: 18.
+Panorama, 2026, todos los activos: 120 registros, 88.304.451,13 bbl, 243 días y 363.392,80 bbl/día.
+Precio promedio enero–julio 2026: 75,897142857 USD/bbl, siete meses; agosto permanece sin precio.
+
+VALIDACIÓN Y ALCANCE
+Se validan los datos, claves, relaciones, consultas incorporadas y esquemas JSON públicos de PBIP/PBIR. El modelo model.bim también se deserializó correctamente con las bibliotecas Tabular de Microsoft en modo PowerBI (5 tablas, 5 relaciones y 21 medidas). Esto no ejecuta las medidas DAX. Consulta validacion_powerbi.json para los controles realmente ejecutados.
+La apertura, actualización y representación visual dentro de Power BI Desktop no se verificaron en esta sesión porque el controlador de aplicaciones no pudo iniciarse. El archivo entregado es un proyecto PBIP editable; no se presenta como un PBIX ya actualizado.
+
+FUENTES Y DOCUMENTACIÓN
+Repositorio: https://github.com/residenterick681/proyecto_final_Dashboard_EDA
+Dashboard web: https://residenterick681.github.io/proyecto_final_Dashboard_EDA/
+Estructura PBIR: https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-report
+Modelo PBIP: https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-dataset

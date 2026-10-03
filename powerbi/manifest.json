@@ -1,0 +1,18 @@
+{
+  "tablas": {
+    "Produccion": 789,
+    "Precios": 67,
+    "Activos": 16,
+    "Calendario": 68,
+    "Cobertura": 896
+  },
+  "medidas": 21,
+  "paginas": 3,
+  "sha256_csv": {
+    "Activos.csv": "44f5dabefd5bcd27c58d6836d725b3ac1896e2f82a75559c5d246052bd307ba7",
+    "Calendario.csv": "2af5650ac138a06e231728483af054755ef50c5087c69f5dbf361b99307a7b9b",
+    "Cobertura.csv": "ac42c4979df1be3002516bc066ac1f5fb2b26649f923a92d4f37d32526ae1d0d",
+    "Precios.csv": "5ceb29e171c4e6ee54008d879a712a8daefff8f34d61655775f62a604538605f",
+    "Produccion.csv": "1e9f9337e4a10b951e69085661ae5156b67ffce29901f900f7f87017e01956e6"
+  }
+}
