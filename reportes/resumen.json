@@ -1,0 +1,89 @@
+{
+  "anio_actual": 2026,
+  "mes_corte": 8,
+  "n_actual": 120,
+  "crudo_actual": 88304451.13,
+  "dias_actual": 243,
+  "crudo_diario_actual": 363392.8030041152,
+  "gas_actual": 28171431.549000002,
+  "n_activos_actual": 15,
+  "precio_medio_actual": 75.89714285714285,
+  "n_meses_precio_actual": 7,
+  "top3": [
+    "SA",
+    "AU",
+    "SH"
+  ],
+  "top3_pct": 51.747987802707264,
+  "activos_comparables": [
+    "AM",
+    "AP",
+    "AU",
+    "AV",
+    "CU",
+    "EY",
+    "IN",
+    "ITT",
+    "LA",
+    "LI",
+    "OY",
+    "PA",
+    "SA",
+    "SH"
+  ],
+  "cambio_comparable_pct": 7.5347193699044634,
+  "diario_comparable_actual": 352214.8383950617,
+  "diario_comparable_anterior": 327535.9255679012,
+  "mayor_caida": {
+    "activo": "IN",
+    "n_actual": 8,
+    "n_anterior": 8,
+    "diario_actual": 12555.692139917695,
+    "diario_anterior": 13393.361111111111,
+    "cambio_pct": -6.254359635674178,
+    "cambio_diario": -837.6689711934159
+  },
+  "correlacion": {
+    "n": 54,
+    "r": 0.016568184798497615,
+    "ic95": [
+      -0.20176605044229481,
+      0.19230747830279715
+    ],
+    "bloque": 3,
+    "replicas": 2000,
+    "semilla": 2026,
+    "sensibilidad_bloque_6": {
+      "n": 54,
+      "r": 0.016568184798497615,
+      "ic95": [
+        -0.20171035716959443,
+        0.19956742729770377
+      ],
+      "bloque": 6,
+      "replicas": 2000,
+      "semilla": 2026
+    },
+    "spearman": 0.0642271774347246,
+    "cohorte": [
+      "AM",
+      "AP",
+      "AU",
+      "CU",
+      "EY",
+      "IN",
+      "ITT",
+      "LI",
+      "OY",
+      "PA",
+      "SA"
+    ],
+    "r_niveles": 0.1272114127702893
+  },
+  "crudo_media": 801265.2119390863,
+  "crudo_mediana": 468703.705,
+  "crudo_std": 738050.3059481496,
+  "crudo_asimetria": 0.9055347175656825,
+  "n_crudo": 788,
+  "n_gas": 787
+}

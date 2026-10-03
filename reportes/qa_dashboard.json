@@ -1,0 +1,74 @@
+{
+  "surface": "Microsoft Edge headless, Playwright, archivo estático local",
+  "checks": [
+    {
+      "test": "Default 2026 coverage",
+      "result": "PASS"
+    },
+    {
+      "test": "Default small groups warning",
+      "result": "PASS"
+    },
+    {
+      "test": "Price missing August",
+      "result": "PASS"
+    },
+    {
+      "test": "Asset selection",
+      "result": "PASS"
+    },
+    {
+      "test": "Gas units",
+      "result": "PASS"
+    },
+    {
+      "test": "Empty subset",
+      "result": "PASS"
+    },
+    {
+      "test": "Full history",
+      "result": "PASS"
+    },
+    {
+      "test": "Balanced cohort",
+      "result": "PASS"
+    },
+    {
+      "test": "Balanced assets",
+      "result": "PASS"
+    },
+    {
+      "test": "Conflict NA handling",
+      "result": "PASS"
+    },
+    {
+      "test": "Invalid date range",
+      "result": "PASS"
+    },
+    {
+      "test": "CSV download",
+      "result": "PASS"
+    },
+    {
+      "test": "Quality tab",
+      "result": "PASS"
+    },
+    {
+      "test": "Decisions tab",
+      "result": "PASS"
+    },
+    {
+      "test": "Method tab",
+      "result": "PASS"
+    },
+    {
+      "test": "Numerical axes remain linear after all filters",
+      "result": "PASS"
+    },
+    {
+      "test": "Mobile 390px no page overflow",
+      "result": "PASS"
+    }
+  ],
+  "javascript_errors": []
+}

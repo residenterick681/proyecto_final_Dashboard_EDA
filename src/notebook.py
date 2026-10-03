@@ -1,0 +1,52 @@
+"""Construye y ejecuta un notebook con los siete pasos exactos de S3_P1."""
+import json
+import sys
+import nbformat as nbf
+from nbclient import NotebookClient
+from jupyter_client import KernelManager
+from .pipeline import ROOT
+from .content import QUESTION,TECHNICAL
+
+def build(root=ROOT,execute=True):
+    s=json.loads((root/'reportes/resumen.json').read_text(encoding='utf-8')); a=json.loads((root/'reportes/auditoria.json').read_text(encoding='utf-8'))
+    cells=[]
+    def md(t):cells.append(nbf.v4.new_markdown_cell(t))
+    def code(t):cells.append(nbf.v4.new_code_cell(t))
+    md('# Proyecto final · Dashboard EDA de producción petrolera\n**Ruano · MIACD02P01**\n\nBasado en los siete pasos de `S3_P1_Ruano.ipynb`. Archivos aportados por el usuario; no se simula producción. Ejecutar de arriba abajo con Python 3.12 y las dependencias del repositorio.')
+    code("from pathlib import Path\nimport sys, json, inspect\nimport numpy as np\nimport pandas as pd\nfrom IPython.display import display, Image, Markdown\nROOT = Path.cwd()\nif not (ROOT / 'src').exists(): ROOT = ROOT.parent\nsys.path.insert(0, str(ROOT))\nfrom src import pipeline\nfrom src.content import DICTIONARY, decisions\nfrom src.pipeline import load_sources, clean_sources, analyze, SEED\nprint('Python:', sys.version.split()[0], '| Semilla:', SEED)\nraw, prices_raw, catalog = load_sources(ROOT)\ndf, prices, audit, conflicts, duplicates, coverage, fences = clean_sources(raw, prices_raw, catalog)\nsummary, groups, monthly, balanced, changes, comparison = analyze(df, prices)\nprint('Filas originales:', len(raw), '| claves consolidadas:', len(df))")
+    md('## Paso 1 · Pregunta de análisis\n'+QUESTION+'\n\n**Usuario:** analista de planificación y supervisión de producción. **Problema:** distinguir cambios productivos de diferencias en duración de meses, cobertura de activos y errores de datos. **Unidad:** activo-mes. Las conclusiones describen el archivo, no la producción nacional ni causas operativas.')
+    code("display(pd.DataFrame([{'pregunta': 'Evolución y concentración', 'unidad': 'activo-mes', 'salida': 'volúmenes y tasas por activo'}, {'pregunta': 'Asociación con precio', 'unidad': 'mes de una cohorte fija', 'salida': 'correlación descriptiva de cambios'}]))")
+    md('## Paso 2 · Origen y estructura\nCopias inmutables de un XLSX de producción, un CSV de precios y un CSV de nomenclatura. Las unidades de volumen se interpretan según la ficha de Datos Abiertos Ecuador (BPPM/MPC); los archivos no contienen un diccionario propio. La identidad exacta con los recursos oficiales no está certificada. El CSV del precio explicita USD/barril. AB16 no tiene nomenclatura y permanece sin inventar equivalencias.\n\nEl nombre «acumulada» del XLSX agrupa una historia mensual; no se diferencia la serie como si fuera acumulado anual. Esta interpretación se apoya en la ficha mensual y en los valores que suben y bajan dentro del año.')
+    code("print('Dimensiones de las tres fuentes:', raw.shape, prices_raw.shape, catalog.shape)\nraw.info()\ndisplay(raw.describe(include='all'))\ndisplay(pd.DataFrame(DICTIONARY, columns=['tabla','campo','tipo','unidad','regla']))")
+    md(f'**Resultado e interpretación:** {a["filas_produccion_original"]} filas originales de producción, {a["n_meses"]} meses y {a["n_activos"]} códigos. Los {a["n_precios"]} precios cubren enero de 2021 a julio de 2026. No todos los activos tienen igual cobertura; producción de agosto de 2026 se conserva sin precio.')
+    md('## Paso 3 · Análisis univariado\nSe analiza la base consolidada sin imputar ni eliminar extremos. La auditoría se desarrolla en el paso 5. Media y mediana responden a preguntas distintas; la distribución reúne activos de escalas diferentes.')
+    code("display(df[['crudo','gas','crudo_diario']].agg(['count','mean','median','std','skew','min','max']))\ndisplay(Image(filename=str(ROOT/'reportes/figuras/01_distribucion.png')))")
+    md(f'**Interpretación:** crudo tiene n={s["n_crudo"]} valores válidos, media {s["crudo_media"]:,.2f}, mediana {s["crudo_mediana"]:,.2f} y desviación {s["crudo_std"]:,.2f} barriles por activo-mes. La asimetría {s["crudo_asimetria"]:.3f} y la media mayor que la mediana muestran una cola superior. No equivalen al rendimiento de un activo típico constante ni a crecimiento temporal.')
+    md('## Paso 4 · Análisis bivariado\nPara precio-producción se usa una cohorte fija con crudo válido en los 56 meses. El precio se une por mes una sola vez. La tasa diaria controla la distinta duración de los meses. Se examinan niveles y cambios mensuales; no se repite el precio por activo para inflar n.')
+    code("display(monthly.head())\ndisplay(Image(filename=str(ROOT/'reportes/figuras/02_serie_cobertura.png')))\ndisplay(Image(filename=str(ROOT/'reportes/figuras/04_cambios.png')))\ndisplay(pd.DataFrame([summary['correlacion']]).drop(columns=['sensibilidad_bloque_6']))")
+    c=s['correlacion'];md(f'**Interpretación:** {len(c["cohorte"])} activos estables, 55 meses con precio y 54 cambios pareados. Pearson en niveles = {c["r_niveles"]:.3f}; Pearson en cambios = {c["r"]:.3f}; Spearman en cambios = {c["spearman"]:.3f}. No aparece una asociación lineal fuerte contemporánea en esta cohorte. Esto no demuestra independencia ni descarta rezagos.\n\n**Incertidumbre exploratoria:** remuestreo conjunto de pares en bloques circulares de 3 meses, 2.000 réplicas, semilla 2026; IC percentil [{c["ic95"][0]:.3f}, {c["ic95"][1]:.3f}]. Con bloques de 6 meses: [{c["sensibilidad_bloque_6"]["ic95"][0]:.3f}, {c["sensibilidad_bloque_6"]["ic95"][1]:.3f}]. Los bloques preservan dependencia local, no garantizan estacionariedad ni cobertura nominal. No se informa p-valor de independencia ficticia ni se predice producción.')
+    md('## Paso 5 · Faltantes, duplicados y atípicos\nSolo se consolidan observaciones de una misma clave. La tolerancia absoluta de 1e-6 absorbe diferencias de representación de Excel, sin resolver discrepancias de 0,01. Las celdas contradictorias quedan NA, conservando las demás medidas válidas de esa fila. Sin imputación. Los atípicos se marcan dentro de cada activo con 1,5 IQR de tasa diaria y se conservan.')
+    code("display(pd.DataFrame(list(audit.items()),columns=['control','resultado']))\ndisplay(conflicts)\ndisplay(duplicates)\ndisplay(coverage[coverage.estado.eq('sin registro interior')])\ndisplay(fences)\nassert not df.duplicated(['anio','mes','activo']).any()\nassert len(df) == raw[['AÑO','MES','ACTIVO']].drop_duplicates().shape[0]")
+    md(f'**Resultado e interpretación:** 9 copias exactas y 13 filas redundantes en total; quedan {a["filas_limpias"]} claves. LA en agosto de 2022 presenta crudo 366668,06 vs. 366668,05: falta 1 crudo. AM y AU de ese mes presentan gas contradictorio: faltan 2 gases. Hay 17 huecos interiores de AV y uno de SH; no se interpretan como producción cero. AB16 carece de nombre en 36 filas. Se conservan 18 ceros de gas, {a["atipicos_crudo_diario"]} marcas IQR de crudo diario y {a["atipicos_gas_diario"]} de gas diario. IQR=0 de AV requiere especial cautela, no eliminación automática.')
+    md('## Paso 6 · Segmentación por activo y año\nCada tabla incluye n válido, no solo total de filas. Regla descriptiva: n<12 meses implica menos de una vuelta anual; no es garantía de precisión a partir de 12. Los registros temporales pueden estar correlacionados. Para 2026/2025 se usan enero-agosto, tasas por días calendario y solo activos completos en ambos períodos.')
+    code("display(groups)\ndisplay(comparison)\ndisplay(Image(filename=str(ROOT/'reportes/figuras/05_comparacion.png')))\nprint('Activos comparables:', summary['activos_comparables'])\nprint('Cambio de cohorte (%):', summary['cambio_comparable_pct'])")
+    md(f'**Interpretación:** los 14 activos comparables aumentan su tasa conjunta {s["cambio_comparable_pct"]:.2f}%. IN cae {s["mayor_caida"]["cambio_pct"]:.2f}% con n=8 meses en cada año. AIT y AB16 quedan fuera de esta comparación al no estar en ambos períodos completos. No se presume que un código sustituya al otro.')
+    md('## Paso 7 · Hallazgos y decisiones\nLos indicadores y sus límites se convierten en cuatro acciones verificables. Los umbrales de gestión son propuestas explícitas, no resultados estadísticos ni normas.')
+    code("display(Image(filename=str(ROOT/'reportes/figuras/03_concentracion.png')))\nfor item in decisions(summary,audit):\n    display(Markdown('### '+item['titulo']+'\\n\\n'+'\\n\\n'.join('**'+k.capitalize()+':** '+v for k,v in item.items() if k!='titulo')))")
+    md('## Anexo técnico T1-T8\n**Correspondencia propuesta:** la rúbrica nombra T1-T8 sin proporcionar sus enunciados. Los siguientes ocho apartados cubren el código, limpieza, segmentación, n y reproducibilidad; deben cotejarse con la guía oficial si se proporciona. No se presentan como transcripción de una guía inexistente.')
+    for tag,title,func,explanation in TECHNICAL:
+        md(f'### {tag} · {title}\n{explanation}')
+        # Mostrar extractos pertinentes; el código completo y ejecutable está en src/pipeline.py.
+        code(f"print(inspect.getsource(pipeline.{func}))")
+    md('## Alcance y fuentes\n- S3_P1: método de siete pasos. S3_P2: interpretación prudente de asociación e incertidumbre. S3_P3: separación de evaluación y modelos; no se fuerza predicción sin pregunta predictiva. S3_P4: módulos, rutas, versiones y Git.\n- S3_EDA_Critico_Reel_Turismo y S3_reel: sumas vs. promedios y n de grupos.\n- EDA_Produccion_Petrolera_Ecuador_Ruano: antecedente del dominio; se usan exclusivamente los tres archivos nuevos.\n- [Datos Abiertos Ecuador](https://www.datosabiertos.gob.ec/dataset/produccion-mensual-petroecuador).\n- [BCE, definición del precio](https://contenido.bce.fin.ec/).\n\n`python -m src.reproducir` reconstruye análisis, gráficos, dashboard, notebook ejecutado y PDF. Las fuentes se verifican con SHA-256. El ZIP no requiere descargas de datos.')
+    nb=nbf.v4.new_notebook(cells=cells,metadata={'kernelspec':{'name':'python3','display_name':'Python 3.12','language':'python'},'language_info':{'name':'python','version':'3.12'}})
+    path=root/'notebooks/01_EDA_petroleo.ipynb'
+    if execute:
+        client=NotebookClient(nb,timeout=180,kernel_name='python3',resources={'metadata':{'path':str(root)}})
+        client.km=KernelManager(kernel_name='python3')
+        client.km.kernel_spec.argv=[sys.executable,'-m','ipykernel_launcher','-f','{connection_file}']
+        client.execute()
+    nbf.write(nb,path)
+    return path
+
+if __name__=='__main__':print(build())

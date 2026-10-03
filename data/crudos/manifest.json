@@ -1,0 +1,23 @@
+[
+  {
+    "archivo": "produccion_original.xlsx",
+    "nombre_entregado": "eppec_prd_petroleo_acumulada_2026 (2).xlsx",
+    "bytes": 41438,
+    "sha256": "ecfdc55ff37513772211970068df37c961ff472edf2917e55459f17db8a00e7c",
+    "origen": "Copia aportada por el usuario; conservada sin modificaciones."
+  },
+  {
+    "archivo": "precios_original.csv",
+    "nombre_entregado": "precio-petrleo-crudo-ecu (1).csv",
+    "bytes": 1937,
+    "sha256": "4c9555a412907cf57e5d91af22928a78613fe89f6466429131e2b15aff3cec56",
+    "origen": "Copia aportada por el usuario; conservada sin modificaciones."
+  },
+  {
+    "archivo": "activos_original.csv",
+    "nombre_entregado": "activos_nomenclatura.csv",
+    "bytes": 244,
+    "sha256": "63363bfadfc7b1bd5748256731f90221b35359efb9bb0dd967fcda0d4d48d98c",
+    "origen": "Copia aportada por el usuario; conservada sin modificaciones."
+  }
+]

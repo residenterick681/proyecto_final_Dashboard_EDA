@@ -1,0 +1,4 @@
+anio,mes,activo,variable,valores,filas_origen,tratamiento
+2022,8,AM,gas,713407.82 | 103.69,93|110,NA; pendiente de validar con fuente
+2022,8,AU,gas,310275.38 | 310050.89,95|115,NA; pendiente de validar con fuente
+2022,8,LA,crudo,366668.06 | 366668.05,100|112,NA; pendiente de validar con fuente

@@ -1,0 +1,897 @@
+fecha,activo,estado,crudo_valido,gas_valido
+2022-01-01,AB16,fuera de cobertura observada,False,False
+2022-02-01,AB16,fuera de cobertura observada,False,False
+2022-03-01,AB16,fuera de cobertura observada,False,False
+2022-04-01,AB16,fuera de cobertura observada,False,False
+2022-05-01,AB16,fuera de cobertura observada,False,False
+2022-06-01,AB16,fuera de cobertura observada,False,False
+2022-07-01,AB16,fuera de cobertura observada,False,False
+2022-08-01,AB16,fuera de cobertura observada,False,False
+2022-09-01,AB16,fuera de cobertura observada,False,False
+2022-10-01,AB16,fuera de cobertura observada,False,False
+2022-11-01,AB16,fuera de cobertura observada,False,False
+2022-12-01,AB16,fuera de cobertura observada,False,False
+2023-01-01,AB16,observado,True,True
+2023-02-01,AB16,observado,True,True
+2023-03-01,AB16,observado,True,True
+2023-04-01,AB16,observado,True,True
+2023-05-01,AB16,observado,True,True
+2023-06-01,AB16,observado,True,True
+2023-07-01,AB16,observado,True,True
+2023-08-01,AB16,observado,True,True
+2023-09-01,AB16,observado,True,True
+2023-10-01,AB16,observado,True,True
+2023-11-01,AB16,observado,True,True
+2023-12-01,AB16,observado,True,True
+2024-01-01,AB16,observado,True,True
+2024-02-01,AB16,observado,True,True
+2024-03-01,AB16,observado,True,True
+2024-04-01,AB16,observado,True,True
+2024-05-01,AB16,observado,True,True
+2024-06-01,AB16,observado,True,True
+2024-07-01,AB16,observado,True,True
+2024-08-01,AB16,observado,True,True
+2024-09-01,AB16,observado,True,True
+2024-10-01,AB16,observado,True,True
+2024-11-01,AB16,observado,True,True
+2024-12-01,AB16,observado,True,True
+2025-01-01,AB16,observado,True,True
+2025-02-01,AB16,observado,True,True
+2025-03-01,AB16,observado,True,True
+2025-04-01,AB16,observado,True,True
+2025-05-01,AB16,observado,True,True
+2025-06-01,AB16,observado,True,True
+2025-07-01,AB16,observado,True,True
+2025-08-01,AB16,observado,True,True
+2025-09-01,AB16,observado,True,True
+2025-10-01,AB16,observado,True,True
+2025-11-01,AB16,observado,True,True
+2025-12-01,AB16,observado,True,True
+2026-01-01,AB16,fuera de cobertura observada,False,False
+2026-02-01,AB16,fuera de cobertura observada,False,False
+2026-03-01,AB16,fuera de cobertura observada,False,False
+2026-04-01,AB16,fuera de cobertura observada,False,False
+2026-05-01,AB16,fuera de cobertura observada,False,False
+2026-06-01,AB16,fuera de cobertura observada,False,False
+2026-07-01,AB16,fuera de cobertura observada,False,False
+2026-08-01,AB16,fuera de cobertura observada,False,False
+2022-01-01,AIT,fuera de cobertura observada,False,False
+2022-02-01,AIT,fuera de cobertura observada,False,False
+2022-03-01,AIT,fuera de cobertura observada,False,False
+2022-04-01,AIT,fuera de cobertura observada,False,False
+2022-05-01,AIT,fuera de cobertura observada,False,False
+2022-06-01,AIT,fuera de cobertura observada,False,False
+2022-07-01,AIT,fuera de cobertura observada,False,False
+2022-08-01,AIT,fuera de cobertura observada,False,False
+2022-09-01,AIT,fuera de cobertura observada,False,False
+2022-10-01,AIT,fuera de cobertura observada,False,False
+2022-11-01,AIT,fuera de cobertura observada,False,False
+2022-12-01,AIT,fuera de cobertura observada,False,False
+2023-01-01,AIT,fuera de cobertura observada,False,False
+2023-02-01,AIT,fuera de cobertura observada,False,False
+2023-03-01,AIT,fuera de cobertura observada,False,False
+2023-04-01,AIT,fuera de cobertura observada,False,False
+2023-05-01,AIT,fuera de cobertura observada,False,False
+2023-06-01,AIT,fuera de cobertura observada,False,False
+2023-07-01,AIT,fuera de cobertura observada,False,False
+2023-08-01,AIT,fuera de cobertura observada,False,False
+2023-09-01,AIT,fuera de cobertura observada,False,False
+2023-10-01,AIT,fuera de cobertura observada,False,False
+2023-11-01,AIT,fuera de cobertura observada,False,False
+2023-12-01,AIT,fuera de cobertura observada,False,False
+2024-01-01,AIT,fuera de cobertura observada,False,False
+2024-02-01,AIT,fuera de cobertura observada,False,False
+2024-03-01,AIT,fuera de cobertura observada,False,False
+2024-04-01,AIT,fuera de cobertura observada,False,False
+2024-05-01,AIT,fuera de cobertura observada,False,False
+2024-06-01,AIT,fuera de cobertura observada,False,False
+2024-07-01,AIT,fuera de cobertura observada,False,False
+2024-08-01,AIT,fuera de cobertura observada,False,False
+2024-09-01,AIT,fuera de cobertura observada,False,False
+2024-10-01,AIT,fuera de cobertura observada,False,False
+2024-11-01,AIT,fuera de cobertura observada,False,False
+2024-12-01,AIT,fuera de cobertura observada,False,False
+2025-01-01,AIT,fuera de cobertura observada,False,False
+2025-02-01,AIT,fuera de cobertura observada,False,False
+2025-03-01,AIT,fuera de cobertura observada,False,False
+2025-04-01,AIT,fuera de cobertura observada,False,False
+2025-05-01,AIT,fuera de cobertura observada,False,False
+2025-06-01,AIT,fuera de cobertura observada,False,False
+2025-07-01,AIT,fuera de cobertura observada,False,False
+2025-08-01,AIT,fuera de cobertura observada,False,False
+2025-09-01,AIT,fuera de cobertura observada,False,False
+2025-10-01,AIT,fuera de cobertura observada,False,False
+2025-11-01,AIT,fuera de cobertura observada,False,False
+2025-12-01,AIT,fuera de cobertura observada,False,False
+2026-01-01,AIT,observado,True,True
+2026-02-01,AIT,observado,True,True
+2026-03-01,AIT,observado,True,True
+2026-04-01,AIT,observado,True,True
+2026-05-01,AIT,observado,True,True
+2026-06-01,AIT,observado,True,True
+2026-07-01,AIT,observado,True,True
+2026-08-01,AIT,observado,True,True
+2022-01-01,AM,observado,True,True
+2022-02-01,AM,observado,True,True
+2022-03-01,AM,observado,True,True
+2022-04-01,AM,observado,True,True
+2022-05-01,AM,observado,True,True
+2022-06-01,AM,observado,True,True
+2022-07-01,AM,observado,True,True
+2022-08-01,AM,observado,True,False
+2022-09-01,AM,observado,True,True
+2022-10-01,AM,observado,True,True
+2022-11-01,AM,observado,True,True
+2022-12-01,AM,observado,True,True
+2023-01-01,AM,observado,True,True
+2023-02-01,AM,observado,True,True
+2023-03-01,AM,observado,True,True
+2023-04-01,AM,observado,True,True
+2023-05-01,AM,observado,True,True
+2023-06-01,AM,observado,True,True
+2023-07-01,AM,observado,True,True
+2023-08-01,AM,observado,True,True
+2023-09-01,AM,observado,True,True
+2023-10-01,AM,observado,True,True
+2023-11-01,AM,observado,True,True
+2023-12-01,AM,observado,True,True
+2024-01-01,AM,observado,True,True
+2024-02-01,AM,observado,True,True
+2024-03-01,AM,observado,True,True
+2024-04-01,AM,observado,True,True
+2024-05-01,AM,observado,True,True
+2024-06-01,AM,observado,True,True
+2024-07-01,AM,observado,True,True
+2024-08-01,AM,observado,True,True
+2024-09-01,AM,observado,True,True
+2024-10-01,AM,observado,True,True
+2024-11-01,AM,observado,True,True
+2024-12-01,AM,observado,True,True
+2025-01-01,AM,observado,True,True
+2025-02-01,AM,observado,True,True
+2025-03-01,AM,observado,True,True
+2025-04-01,AM,observado,True,True
+2025-05-01,AM,observado,True,True
+2025-06-01,AM,observado,True,True
+2025-07-01,AM,observado,True,True
+2025-08-01,AM,observado,True,True
+2025-09-01,AM,observado,True,True
+2025-10-01,AM,observado,True,True
+2025-11-01,AM,observado,True,True
+2025-12-01,AM,observado,True,True
+2026-01-01,AM,observado,True,True
+2026-02-01,AM,observado,True,True
+2026-03-01,AM,observado,True,True
+2026-04-01,AM,observado,True,True
+2026-05-01,AM,observado,True,True
+2026-06-01,AM,observado,True,True
+2026-07-01,AM,observado,True,True
+2026-08-01,AM,observado,True,True
+2022-01-01,AP,observado,True,True
+2022-02-01,AP,observado,True,True
+2022-03-01,AP,observado,True,True
+2022-04-01,AP,observado,True,True
+2022-05-01,AP,observado,True,True
+2022-06-01,AP,observado,True,True
+2022-07-01,AP,observado,True,True
+2022-08-01,AP,observado,True,True
+2022-09-01,AP,observado,True,True
+2022-10-01,AP,observado,True,True
+2022-11-01,AP,observado,True,True
+2022-12-01,AP,observado,True,True
+2023-01-01,AP,observado,True,True
+2023-02-01,AP,observado,True,True
+2023-03-01,AP,observado,True,True
+2023-04-01,AP,observado,True,True
+2023-05-01,AP,observado,True,True
+2023-06-01,AP,observado,True,True
+2023-07-01,AP,observado,True,True
+2023-08-01,AP,observado,True,True
+2023-09-01,AP,observado,True,True
+2023-10-01,AP,observado,True,True
+2023-11-01,AP,observado,True,True
+2023-12-01,AP,observado,True,True
+2024-01-01,AP,observado,True,True
+2024-02-01,AP,observado,True,True
+2024-03-01,AP,observado,True,True
+2024-04-01,AP,observado,True,True
+2024-05-01,AP,observado,True,True
+2024-06-01,AP,observado,True,True
+2024-07-01,AP,observado,True,True
+2024-08-01,AP,observado,True,True
+2024-09-01,AP,observado,True,True
+2024-10-01,AP,observado,True,True
+2024-11-01,AP,observado,True,True
+2024-12-01,AP,observado,True,True
+2025-01-01,AP,observado,True,True
+2025-02-01,AP,observado,True,True
+2025-03-01,AP,observado,True,True
+2025-04-01,AP,observado,True,True
+2025-05-01,AP,observado,True,True
+2025-06-01,AP,observado,True,True
+2025-07-01,AP,observado,True,True
+2025-08-01,AP,observado,True,True
+2025-09-01,AP,observado,True,True
+2025-10-01,AP,observado,True,True
+2025-11-01,AP,observado,True,True
+2025-12-01,AP,observado,True,True
+2026-01-01,AP,observado,True,True
+2026-02-01,AP,observado,True,True
+2026-03-01,AP,observado,True,True
+2026-04-01,AP,observado,True,True
+2026-05-01,AP,observado,True,True
+2026-06-01,AP,observado,True,True
+2026-07-01,AP,observado,True,True
+2026-08-01,AP,observado,True,True
+2022-01-01,AU,observado,True,True
+2022-02-01,AU,observado,True,True
+2022-03-01,AU,observado,True,True
+2022-04-01,AU,observado,True,True
+2022-05-01,AU,observado,True,True
+2022-06-01,AU,observado,True,True
+2022-07-01,AU,observado,True,True
+2022-08-01,AU,observado,True,False
+2022-09-01,AU,observado,True,True
+2022-10-01,AU,observado,True,True
+2022-11-01,AU,observado,True,True
+2022-12-01,AU,observado,True,True
+2023-01-01,AU,observado,True,True
+2023-02-01,AU,observado,True,True
+2023-03-01,AU,observado,True,True
+2023-04-01,AU,observado,True,True
+2023-05-01,AU,observado,True,True
+2023-06-01,AU,observado,True,True
+2023-07-01,AU,observado,True,True
+2023-08-01,AU,observado,True,True
+2023-09-01,AU,observado,True,True
+2023-10-01,AU,observado,True,True
+2023-11-01,AU,observado,True,True
+2023-12-01,AU,observado,True,True
+2024-01-01,AU,observado,True,True
+2024-02-01,AU,observado,True,True
+2024-03-01,AU,observado,True,True
+2024-04-01,AU,observado,True,True
+2024-05-01,AU,observado,True,True
+2024-06-01,AU,observado,True,True
+2024-07-01,AU,observado,True,True
+2024-08-01,AU,observado,True,True
+2024-09-01,AU,observado,True,True
+2024-10-01,AU,observado,True,True
+2024-11-01,AU,observado,True,True
+2024-12-01,AU,observado,True,True
+2025-01-01,AU,observado,True,True
+2025-02-01,AU,observado,True,True
+2025-03-01,AU,observado,True,True
+2025-04-01,AU,observado,True,True
+2025-05-01,AU,observado,True,True
+2025-06-01,AU,observado,True,True
+2025-07-01,AU,observado,True,True
+2025-08-01,AU,observado,True,True
+2025-09-01,AU,observado,True,True
+2025-10-01,AU,observado,True,True
+2025-11-01,AU,observado,True,True
+2025-12-01,AU,observado,True,True
+2026-01-01,AU,observado,True,True
+2026-02-01,AU,observado,True,True
+2026-03-01,AU,observado,True,True
+2026-04-01,AU,observado,True,True
+2026-05-01,AU,observado,True,True
+2026-06-01,AU,observado,True,True
+2026-07-01,AU,observado,True,True
+2026-08-01,AU,observado,True,True
+2022-01-01,AV,fuera de cobertura observada,False,False
+2022-02-01,AV,fuera de cobertura observada,False,False
+2022-03-01,AV,fuera de cobertura observada,False,False
+2022-04-01,AV,fuera de cobertura observada,False,False
+2022-05-01,AV,fuera de cobertura observada,False,False
+2022-06-01,AV,fuera de cobertura observada,False,False
+2022-07-01,AV,fuera de cobertura observada,False,False
+2022-08-01,AV,fuera de cobertura observada,False,False
+2022-09-01,AV,fuera de cobertura observada,False,False
+2022-10-01,AV,fuera de cobertura observada,False,False
+2022-11-01,AV,fuera de cobertura observada,False,False
+2022-12-01,AV,fuera de cobertura observada,False,False
+2023-01-01,AV,fuera de cobertura observada,False,False
+2023-02-01,AV,fuera de cobertura observada,False,False
+2023-03-01,AV,fuera de cobertura observada,False,False
+2023-04-01,AV,fuera de cobertura observada,False,False
+2023-05-01,AV,fuera de cobertura observada,False,False
+2023-06-01,AV,fuera de cobertura observada,False,False
+2023-07-01,AV,fuera de cobertura observada,False,False
+2023-08-01,AV,fuera de cobertura observada,False,False
+2023-09-01,AV,fuera de cobertura observada,False,False
+2023-10-01,AV,observado,True,True
+2023-11-01,AV,sin registro interior,False,False
+2023-12-01,AV,sin registro interior,False,False
+2024-01-01,AV,sin registro interior,False,False
+2024-02-01,AV,sin registro interior,False,False
+2024-03-01,AV,sin registro interior,False,False
+2024-04-01,AV,sin registro interior,False,False
+2024-05-01,AV,sin registro interior,False,False
+2024-06-01,AV,sin registro interior,False,False
+2024-07-01,AV,sin registro interior,False,False
+2024-08-01,AV,sin registro interior,False,False
+2024-09-01,AV,sin registro interior,False,False
+2024-10-01,AV,sin registro interior,False,False
+2024-11-01,AV,sin registro interior,False,False
+2024-12-01,AV,sin registro interior,False,False
+2025-01-01,AV,observado,True,True
+2025-02-01,AV,observado,True,True
+2025-03-01,AV,observado,True,True
+2025-04-01,AV,observado,True,True
+2025-05-01,AV,observado,True,True
+2025-06-01,AV,observado,True,True
+2025-07-01,AV,observado,True,True
+2025-08-01,AV,observado,True,True
+2025-09-01,AV,observado,True,True
+2025-10-01,AV,sin registro interior,False,False
+2025-11-01,AV,sin registro interior,False,False
+2025-12-01,AV,sin registro interior,False,False
+2026-01-01,AV,observado,True,True
+2026-02-01,AV,observado,True,True
+2026-03-01,AV,observado,True,True
+2026-04-01,AV,observado,True,True
+2026-05-01,AV,observado,True,True
+2026-06-01,AV,observado,True,True
+2026-07-01,AV,observado,True,True
+2026-08-01,AV,observado,True,True
+2022-01-01,CU,observado,True,True
+2022-02-01,CU,observado,True,True
+2022-03-01,CU,observado,True,True
+2022-04-01,CU,observado,True,True
+2022-05-01,CU,observado,True,True
+2022-06-01,CU,observado,True,True
+2022-07-01,CU,observado,True,True
+2022-08-01,CU,observado,True,True
+2022-09-01,CU,observado,True,True
+2022-10-01,CU,observado,True,True
+2022-11-01,CU,observado,True,True
+2022-12-01,CU,observado,True,True
+2023-01-01,CU,observado,True,True
+2023-02-01,CU,observado,True,True
+2023-03-01,CU,observado,True,True
+2023-04-01,CU,observado,True,True
+2023-05-01,CU,observado,True,True
+2023-06-01,CU,observado,True,True
+2023-07-01,CU,observado,True,True
+2023-08-01,CU,observado,True,True
+2023-09-01,CU,observado,True,True
+2023-10-01,CU,observado,True,True
+2023-11-01,CU,observado,True,True
+2023-12-01,CU,observado,True,True
+2024-01-01,CU,observado,True,True
+2024-02-01,CU,observado,True,True
+2024-03-01,CU,observado,True,True
+2024-04-01,CU,observado,True,True
+2024-05-01,CU,observado,True,True
+2024-06-01,CU,observado,True,True
+2024-07-01,CU,observado,True,True
+2024-08-01,CU,observado,True,True
+2024-09-01,CU,observado,True,True
+2024-10-01,CU,observado,True,True
+2024-11-01,CU,observado,True,True
+2024-12-01,CU,observado,True,True
+2025-01-01,CU,observado,True,True
+2025-02-01,CU,observado,True,True
+2025-03-01,CU,observado,True,True
+2025-04-01,CU,observado,True,True
+2025-05-01,CU,observado,True,True
+2025-06-01,CU,observado,True,True
+2025-07-01,CU,observado,True,True
+2025-08-01,CU,observado,True,True
+2025-09-01,CU,observado,True,True
+2025-10-01,CU,observado,True,True
+2025-11-01,CU,observado,True,True
+2025-12-01,CU,observado,True,True
+2026-01-01,CU,observado,True,True
+2026-02-01,CU,observado,True,True
+2026-03-01,CU,observado,True,True
+2026-04-01,CU,observado,True,True
+2026-05-01,CU,observado,True,True
+2026-06-01,CU,observado,True,True
+2026-07-01,CU,observado,True,True
+2026-08-01,CU,observado,True,True
+2022-01-01,EY,observado,True,True
+2022-02-01,EY,observado,True,True
+2022-03-01,EY,observado,True,True
+2022-04-01,EY,observado,True,True
+2022-05-01,EY,observado,True,True
+2022-06-01,EY,observado,True,True
+2022-07-01,EY,observado,True,True
+2022-08-01,EY,observado,True,True
+2022-09-01,EY,observado,True,True
+2022-10-01,EY,observado,True,True
+2022-11-01,EY,observado,True,True
+2022-12-01,EY,observado,True,True
+2023-01-01,EY,observado,True,True
+2023-02-01,EY,observado,True,True
+2023-03-01,EY,observado,True,True
+2023-04-01,EY,observado,True,True
+2023-05-01,EY,observado,True,True
+2023-06-01,EY,observado,True,True
+2023-07-01,EY,observado,True,True
+2023-08-01,EY,observado,True,True
+2023-09-01,EY,observado,True,True
+2023-10-01,EY,observado,True,True
+2023-11-01,EY,observado,True,True
+2023-12-01,EY,observado,True,True
+2024-01-01,EY,observado,True,True
+2024-02-01,EY,observado,True,True
+2024-03-01,EY,observado,True,True
+2024-04-01,EY,observado,True,True
+2024-05-01,EY,observado,True,True
+2024-06-01,EY,observado,True,True
+2024-07-01,EY,observado,True,True
+2024-08-01,EY,observado,True,True
+2024-09-01,EY,observado,True,True
+2024-10-01,EY,observado,True,True
+2024-11-01,EY,observado,True,True
+2024-12-01,EY,observado,True,True
+2025-01-01,EY,observado,True,True
+2025-02-01,EY,observado,True,True
+2025-03-01,EY,observado,True,True
+2025-04-01,EY,observado,True,True
+2025-05-01,EY,observado,True,True
+2025-06-01,EY,observado,True,True
+2025-07-01,EY,observado,True,True
+2025-08-01,EY,observado,True,True
+2025-09-01,EY,observado,True,True
+2025-10-01,EY,observado,True,True
+2025-11-01,EY,observado,True,True
+2025-12-01,EY,observado,True,True
+2026-01-01,EY,observado,True,True
+2026-02-01,EY,observado,True,True
+2026-03-01,EY,observado,True,True
+2026-04-01,EY,observado,True,True
+2026-05-01,EY,observado,True,True
+2026-06-01,EY,observado,True,True
+2026-07-01,EY,observado,True,True
+2026-08-01,EY,observado,True,True
+2022-01-01,IN,observado,True,True
+2022-02-01,IN,observado,True,True
+2022-03-01,IN,observado,True,True
+2022-04-01,IN,observado,True,True
+2022-05-01,IN,observado,True,True
+2022-06-01,IN,observado,True,True
+2022-07-01,IN,observado,True,True
+2022-08-01,IN,observado,True,True
+2022-09-01,IN,observado,True,True
+2022-10-01,IN,observado,True,True
+2022-11-01,IN,observado,True,True
+2022-12-01,IN,observado,True,True
+2023-01-01,IN,observado,True,True
+2023-02-01,IN,observado,True,True
+2023-03-01,IN,observado,True,True
+2023-04-01,IN,observado,True,True
+2023-05-01,IN,observado,True,True
+2023-06-01,IN,observado,True,True
+2023-07-01,IN,observado,True,True
+2023-08-01,IN,observado,True,True
+2023-09-01,IN,observado,True,True
+2023-10-01,IN,observado,True,True
+2023-11-01,IN,observado,True,True
+2023-12-01,IN,observado,True,True
+2024-01-01,IN,observado,True,True
+2024-02-01,IN,observado,True,True
+2024-03-01,IN,observado,True,True
+2024-04-01,IN,observado,True,True
+2024-05-01,IN,observado,True,True
+2024-06-01,IN,observado,True,True
+2024-07-01,IN,observado,True,True
+2024-08-01,IN,observado,True,True
+2024-09-01,IN,observado,True,True
+2024-10-01,IN,observado,True,True
+2024-11-01,IN,observado,True,True
+2024-12-01,IN,observado,True,True
+2025-01-01,IN,observado,True,True
+2025-02-01,IN,observado,True,True
+2025-03-01,IN,observado,True,True
+2025-04-01,IN,observado,True,True
+2025-05-01,IN,observado,True,True
+2025-06-01,IN,observado,True,True
+2025-07-01,IN,observado,True,True
+2025-08-01,IN,observado,True,True
+2025-09-01,IN,observado,True,True
+2025-10-01,IN,observado,True,True
+2025-11-01,IN,observado,True,True
+2025-12-01,IN,observado,True,True
+2026-01-01,IN,observado,True,True
+2026-02-01,IN,observado,True,True
+2026-03-01,IN,observado,True,True
+2026-04-01,IN,observado,True,True
+2026-05-01,IN,observado,True,True
+2026-06-01,IN,observado,True,True
+2026-07-01,IN,observado,True,True
+2026-08-01,IN,observado,True,True
+2022-01-01,ITT,observado,True,True
+2022-02-01,ITT,observado,True,True
+2022-03-01,ITT,observado,True,True
+2022-04-01,ITT,observado,True,True
+2022-05-01,ITT,observado,True,True
+2022-06-01,ITT,observado,True,True
+2022-07-01,ITT,observado,True,True
+2022-08-01,ITT,observado,True,True
+2022-09-01,ITT,observado,True,True
+2022-10-01,ITT,observado,True,True
+2022-11-01,ITT,observado,True,True
+2022-12-01,ITT,observado,True,True
+2023-01-01,ITT,observado,True,True
+2023-02-01,ITT,observado,True,True
+2023-03-01,ITT,observado,True,True
+2023-04-01,ITT,observado,True,True
+2023-05-01,ITT,observado,True,True
+2023-06-01,ITT,observado,True,True
+2023-07-01,ITT,observado,True,True
+2023-08-01,ITT,observado,True,True
+2023-09-01,ITT,observado,True,True
+2023-10-01,ITT,observado,True,True
+2023-11-01,ITT,observado,True,True
+2023-12-01,ITT,observado,True,True
+2024-01-01,ITT,observado,True,True
+2024-02-01,ITT,observado,True,True
+2024-03-01,ITT,observado,True,True
+2024-04-01,ITT,observado,True,True
+2024-05-01,ITT,observado,True,True
+2024-06-01,ITT,observado,True,True
+2024-07-01,ITT,observado,True,True
+2024-08-01,ITT,observado,True,True
+2024-09-01,ITT,observado,True,True
+2024-10-01,ITT,observado,True,True
+2024-11-01,ITT,observado,True,True
+2024-12-01,ITT,observado,True,True
+2025-01-01,ITT,observado,True,True
+2025-02-01,ITT,observado,True,True
+2025-03-01,ITT,observado,True,True
+2025-04-01,ITT,observado,True,True
+2025-05-01,ITT,observado,True,True
+2025-06-01,ITT,observado,True,True
+2025-07-01,ITT,observado,True,True
+2025-08-01,ITT,observado,True,True
+2025-09-01,ITT,observado,True,True
+2025-10-01,ITT,observado,True,True
+2025-11-01,ITT,observado,True,True
+2025-12-01,ITT,observado,True,True
+2026-01-01,ITT,observado,True,True
+2026-02-01,ITT,observado,True,True
+2026-03-01,ITT,observado,True,True
+2026-04-01,ITT,observado,True,True
+2026-05-01,ITT,observado,True,True
+2026-06-01,ITT,observado,True,True
+2026-07-01,ITT,observado,True,True
+2026-08-01,ITT,observado,True,True
+2022-01-01,LA,observado,True,True
+2022-02-01,LA,observado,True,True
+2022-03-01,LA,observado,True,True
+2022-04-01,LA,observado,True,True
+2022-05-01,LA,observado,True,True
+2022-06-01,LA,observado,True,True
+2022-07-01,LA,observado,True,True
+2022-08-01,LA,observado,False,True
+2022-09-01,LA,observado,True,True
+2022-10-01,LA,observado,True,True
+2022-11-01,LA,observado,True,True
+2022-12-01,LA,observado,True,True
+2023-01-01,LA,observado,True,True
+2023-02-01,LA,observado,True,True
+2023-03-01,LA,observado,True,True
+2023-04-01,LA,observado,True,True
+2023-05-01,LA,observado,True,True
+2023-06-01,LA,observado,True,True
+2023-07-01,LA,observado,True,True
+2023-08-01,LA,observado,True,True
+2023-09-01,LA,observado,True,True
+2023-10-01,LA,observado,True,True
+2023-11-01,LA,observado,True,True
+2023-12-01,LA,observado,True,True
+2024-01-01,LA,observado,True,True
+2024-02-01,LA,observado,True,True
+2024-03-01,LA,observado,True,True
+2024-04-01,LA,observado,True,True
+2024-05-01,LA,observado,True,True
+2024-06-01,LA,observado,True,True
+2024-07-01,LA,observado,True,True
+2024-08-01,LA,observado,True,True
+2024-09-01,LA,observado,True,True
+2024-10-01,LA,observado,True,True
+2024-11-01,LA,observado,True,True
+2024-12-01,LA,observado,True,True
+2025-01-01,LA,observado,True,True
+2025-02-01,LA,observado,True,True
+2025-03-01,LA,observado,True,True
+2025-04-01,LA,observado,True,True
+2025-05-01,LA,observado,True,True
+2025-06-01,LA,observado,True,True
+2025-07-01,LA,observado,True,True
+2025-08-01,LA,observado,True,True
+2025-09-01,LA,observado,True,True
+2025-10-01,LA,observado,True,True
+2025-11-01,LA,observado,True,True
+2025-12-01,LA,observado,True,True
+2026-01-01,LA,observado,True,True
+2026-02-01,LA,observado,True,True
+2026-03-01,LA,observado,True,True
+2026-04-01,LA,observado,True,True
+2026-05-01,LA,observado,True,True
+2026-06-01,LA,observado,True,True
+2026-07-01,LA,observado,True,True
+2026-08-01,LA,observado,True,True
+2022-01-01,LI,observado,True,True
+2022-02-01,LI,observado,True,True
+2022-03-01,LI,observado,True,True
+2022-04-01,LI,observado,True,True
+2022-05-01,LI,observado,True,True
+2022-06-01,LI,observado,True,True
+2022-07-01,LI,observado,True,True
+2022-08-01,LI,observado,True,True
+2022-09-01,LI,observado,True,True
+2022-10-01,LI,observado,True,True
+2022-11-01,LI,observado,True,True
+2022-12-01,LI,observado,True,True
+2023-01-01,LI,observado,True,True
+2023-02-01,LI,observado,True,True
+2023-03-01,LI,observado,True,True
+2023-04-01,LI,observado,True,True
+2023-05-01,LI,observado,True,True
+2023-06-01,LI,observado,True,True
+2023-07-01,LI,observado,True,True
+2023-08-01,LI,observado,True,True
+2023-09-01,LI,observado,True,True
+2023-10-01,LI,observado,True,True
+2023-11-01,LI,observado,True,True
+2023-12-01,LI,observado,True,True
+2024-01-01,LI,observado,True,True
+2024-02-01,LI,observado,True,True
+2024-03-01,LI,observado,True,True
+2024-04-01,LI,observado,True,True
+2024-05-01,LI,observado,True,True
+2024-06-01,LI,observado,True,True
+2024-07-01,LI,observado,True,True
+2024-08-01,LI,observado,True,True
+2024-09-01,LI,observado,True,True
+2024-10-01,LI,observado,True,True
+2024-11-01,LI,observado,True,True
+2024-12-01,LI,observado,True,True
+2025-01-01,LI,observado,True,True
+2025-02-01,LI,observado,True,True
+2025-03-01,LI,observado,True,True
+2025-04-01,LI,observado,True,True
+2025-05-01,LI,observado,True,True
+2025-06-01,LI,observado,True,True
+2025-07-01,LI,observado,True,True
+2025-08-01,LI,observado,True,True
+2025-09-01,LI,observado,True,True
+2025-10-01,LI,observado,True,True
+2025-11-01,LI,observado,True,True
+2025-12-01,LI,observado,True,True
+2026-01-01,LI,observado,True,True
+2026-02-01,LI,observado,True,True
+2026-03-01,LI,observado,True,True
+2026-04-01,LI,observado,True,True
+2026-05-01,LI,observado,True,True
+2026-06-01,LI,observado,True,True
+2026-07-01,LI,observado,True,True
+2026-08-01,LI,observado,True,True
+2022-01-01,OY,observado,True,True
+2022-02-01,OY,observado,True,True
+2022-03-01,OY,observado,True,True
+2022-04-01,OY,observado,True,True
+2022-05-01,OY,observado,True,True
+2022-06-01,OY,observado,True,True
+2022-07-01,OY,observado,True,True
+2022-08-01,OY,observado,True,True
+2022-09-01,OY,observado,True,True
+2022-10-01,OY,observado,True,True
+2022-11-01,OY,observado,True,True
+2022-12-01,OY,observado,True,True
+2023-01-01,OY,observado,True,True
+2023-02-01,OY,observado,True,True
+2023-03-01,OY,observado,True,True
+2023-04-01,OY,observado,True,True
+2023-05-01,OY,observado,True,True
+2023-06-01,OY,observado,True,True
+2023-07-01,OY,observado,True,True
+2023-08-01,OY,observado,True,True
+2023-09-01,OY,observado,True,True
+2023-10-01,OY,observado,True,True
+2023-11-01,OY,observado,True,True
+2023-12-01,OY,observado,True,True
+2024-01-01,OY,observado,True,True
+2024-02-01,OY,observado,True,True
+2024-03-01,OY,observado,True,True
+2024-04-01,OY,observado,True,True
+2024-05-01,OY,observado,True,True
+2024-06-01,OY,observado,True,True
+2024-07-01,OY,observado,True,True
+2024-08-01,OY,observado,True,True
+2024-09-01,OY,observado,True,True
+2024-10-01,OY,observado,True,True
+2024-11-01,OY,observado,True,True
+2024-12-01,OY,observado,True,True
+2025-01-01,OY,observado,True,True
+2025-02-01,OY,observado,True,True
+2025-03-01,OY,observado,True,True
+2025-04-01,OY,observado,True,True
+2025-05-01,OY,observado,True,True
+2025-06-01,OY,observado,True,True
+2025-07-01,OY,observado,True,True
+2025-08-01,OY,observado,True,True
+2025-09-01,OY,observado,True,True
+2025-10-01,OY,observado,True,True
+2025-11-01,OY,observado,True,True
+2025-12-01,OY,observado,True,True
+2026-01-01,OY,observado,True,True
+2026-02-01,OY,observado,True,True
+2026-03-01,OY,observado,True,True
+2026-04-01,OY,observado,True,True
+2026-05-01,OY,observado,True,True
+2026-06-01,OY,observado,True,True
+2026-07-01,OY,observado,True,True
+2026-08-01,OY,observado,True,True
+2022-01-01,PA,observado,True,True
+2022-02-01,PA,observado,True,True
+2022-03-01,PA,observado,True,True
+2022-04-01,PA,observado,True,True
+2022-05-01,PA,observado,True,True
+2022-06-01,PA,observado,True,True
+2022-07-01,PA,observado,True,True
+2022-08-01,PA,observado,True,True
+2022-09-01,PA,observado,True,True
+2022-10-01,PA,observado,True,True
+2022-11-01,PA,observado,True,True
+2022-12-01,PA,observado,True,True
+2023-01-01,PA,observado,True,True
+2023-02-01,PA,observado,True,True
+2023-03-01,PA,observado,True,True
+2023-04-01,PA,observado,True,True
+2023-05-01,PA,observado,True,True
+2023-06-01,PA,observado,True,True
+2023-07-01,PA,observado,True,True
+2023-08-01,PA,observado,True,True
+2023-09-01,PA,observado,True,True
+2023-10-01,PA,observado,True,True
+2023-11-01,PA,observado,True,True
+2023-12-01,PA,observado,True,True
+2024-01-01,PA,observado,True,True
+2024-02-01,PA,observado,True,True
+2024-03-01,PA,observado,True,True
+2024-04-01,PA,observado,True,True
+2024-05-01,PA,observado,True,True
+2024-06-01,PA,observado,True,True
+2024-07-01,PA,observado,True,True
+2024-08-01,PA,observado,True,True
+2024-09-01,PA,observado,True,True
+2024-10-01,PA,observado,True,True
+2024-11-01,PA,observado,True,True
+2024-12-01,PA,observado,True,True
+2025-01-01,PA,observado,True,True
+2025-02-01,PA,observado,True,True
+2025-03-01,PA,observado,True,True
+2025-04-01,PA,observado,True,True
+2025-05-01,PA,observado,True,True
+2025-06-01,PA,observado,True,True
+2025-07-01,PA,observado,True,True
+2025-08-01,PA,observado,True,True
+2025-09-01,PA,observado,True,True
+2025-10-01,PA,observado,True,True
+2025-11-01,PA,observado,True,True
+2025-12-01,PA,observado,True,True
+2026-01-01,PA,observado,True,True
+2026-02-01,PA,observado,True,True
+2026-03-01,PA,observado,True,True
+2026-04-01,PA,observado,True,True
+2026-05-01,PA,observado,True,True
+2026-06-01,PA,observado,True,True
+2026-07-01,PA,observado,True,True
+2026-08-01,PA,observado,True,True
+2022-01-01,SA,observado,True,True
+2022-02-01,SA,observado,True,True
+2022-03-01,SA,observado,True,True
+2022-04-01,SA,observado,True,True
+2022-05-01,SA,observado,True,True
+2022-06-01,SA,observado,True,True
+2022-07-01,SA,observado,True,True
+2022-08-01,SA,observado,True,True
+2022-09-01,SA,observado,True,True
+2022-10-01,SA,observado,True,True
+2022-11-01,SA,observado,True,True
+2022-12-01,SA,observado,True,True
+2023-01-01,SA,observado,True,True
+2023-02-01,SA,observado,True,True
+2023-03-01,SA,observado,True,True
+2023-04-01,SA,observado,True,True
+2023-05-01,SA,observado,True,True
+2023-06-01,SA,observado,True,True
+2023-07-01,SA,observado,True,True
+2023-08-01,SA,observado,True,True
+2023-09-01,SA,observado,True,True
+2023-10-01,SA,observado,True,True
+2023-11-01,SA,observado,True,True
+2023-12-01,SA,observado,True,True
+2024-01-01,SA,observado,True,True
+2024-02-01,SA,observado,True,True
+2024-03-01,SA,observado,True,True
+2024-04-01,SA,observado,True,True
+2024-05-01,SA,observado,True,True
+2024-06-01,SA,observado,True,True
+2024-07-01,SA,observado,True,True
+2024-08-01,SA,observado,True,True
+2024-09-01,SA,observado,True,True
+2024-10-01,SA,observado,True,True
+2024-11-01,SA,observado,True,True
+2024-12-01,SA,observado,True,True
+2025-01-01,SA,observado,True,True
+2025-02-01,SA,observado,True,True
+2025-03-01,SA,observado,True,True
+2025-04-01,SA,observado,True,True
+2025-05-01,SA,observado,True,True
+2025-06-01,SA,observado,True,True
+2025-07-01,SA,observado,True,True
+2025-08-01,SA,observado,True,True
+2025-09-01,SA,observado,True,True
+2025-10-01,SA,observado,True,True
+2025-11-01,SA,observado,True,True
+2025-12-01,SA,observado,True,True
+2026-01-01,SA,observado,True,True
+2026-02-01,SA,observado,True,True
+2026-03-01,SA,observado,True,True
+2026-04-01,SA,observado,True,True
+2026-05-01,SA,observado,True,True
+2026-06-01,SA,observado,True,True
+2026-07-01,SA,observado,True,True
+2026-08-01,SA,observado,True,True
+2022-01-01,SH,observado,True,True
+2022-02-01,SH,observado,True,True
+2022-03-01,SH,observado,True,True
+2022-04-01,SH,observado,True,True
+2022-05-01,SH,observado,True,True
+2022-06-01,SH,observado,True,True
+2022-07-01,SH,observado,True,True
+2022-08-01,SH,observado,True,True
+2022-09-01,SH,observado,True,True
+2022-10-01,SH,observado,True,True
+2022-11-01,SH,observado,True,True
+2022-12-01,SH,observado,True,True
+2023-01-01,SH,observado,True,True
+2023-02-01,SH,observado,True,True
+2023-03-01,SH,observado,True,True
+2023-04-01,SH,observado,True,True
+2023-05-01,SH,observado,True,True
+2023-06-01,SH,observado,True,True
+2023-07-01,SH,observado,True,True
+2023-08-01,SH,observado,True,True
+2023-09-01,SH,observado,True,True
+2023-10-01,SH,observado,True,True
+2023-11-01,SH,observado,True,True
+2023-12-01,SH,observado,True,True
+2024-01-01,SH,observado,True,True
+2024-02-01,SH,observado,True,True
+2024-03-01,SH,observado,True,True
+2024-04-01,SH,observado,True,True
+2024-05-01,SH,observado,True,True
+2024-06-01,SH,sin registro interior,False,False
+2024-07-01,SH,observado,True,True
+2024-08-01,SH,observado,True,True
+2024-09-01,SH,observado,True,True
+2024-10-01,SH,observado,True,True
+2024-11-01,SH,observado,True,True
+2024-12-01,SH,observado,True,True
+2025-01-01,SH,observado,True,True
+2025-02-01,SH,observado,True,True
+2025-03-01,SH,observado,True,True
+2025-04-01,SH,observado,True,True
+2025-05-01,SH,observado,True,True
+2025-06-01,SH,observado,True,True
+2025-07-01,SH,observado,True,True
+2025-08-01,SH,observado,True,True
+2025-09-01,SH,observado,True,True
+2025-10-01,SH,observado,True,True
+2025-11-01,SH,observado,True,True
+2025-12-01,SH,observado,True,True
+2026-01-01,SH,observado,True,True
+2026-02-01,SH,observado,True,True
+2026-03-01,SH,observado,True,True
+2026-04-01,SH,observado,True,True
+2026-05-01,SH,observado,True,True
+2026-06-01,SH,observado,True,True
+2026-07-01,SH,observado,True,True
+2026-08-01,SH,observado,True,True

@@ -1,0 +1,21 @@
+tabla,campo,tipo,unidad,definicion_regla
+producción,AÑO / anio,int64,año calendario,2022-2026; parte de la clave
+producción,MES / mes,int64,mes calendario,1-12; parte de la clave
+producción,ACTIVO / activo,string,código nominal,16 códigos observados; parte de la clave
+producción,CRUDO / crudo,float64,barriles mensuales*,Volumen observado; 1 contradicción queda NA
+producción,GAS / gas,float64,MPC mensuales*,Miles de pies cúbicos; 2 contradicciones quedan NA; cero válido
+precio,Período / fecha,datetime64,primer día del mes,67 meses desde 2021-01 hasta 2026-07; clave única
+precio,Precio... / precio_usd_barril,float64,USD por barril,"Indicador mensual agregado, no cotización por activo"
+catálogo,Activo / nombre_activo,string,nombre nominal,15 nombres; AB16 no está en el catálogo
+catálogo,Nomenclatura / activo,string,código nominal,Clave única usada para unión muchos-a-uno
+derivada,fecha,datetime64,primer día del mes,Construida desde anio y mes en producción
+derivada,filas_origen,string,filas de Excel,Números originales separados por |; encabezado en fila 1
+derivada,n_filas_origen,int64,conteo,Cantidad de filas originales consolidadas por clave
+derivada,conflicto_crudo / conflicto_gas,bool,verdadero/falso,True cuando los valores no son equivalentes; no se elige uno
+derivada,catalogo_faltante,bool,verdadero/falso,True si el código no coincide con el catálogo
+derivada,dias_mes,int64,días calendario,"28, 29, 30 o 31; febrero bisiesto incluido"
+derivada,crudo_diario,float64,barriles por día*,crudo/dias_mes; no mide tasa de días operativos
+derivada,gas_diario,float64,MPC por día*,gas/dias_mes; no se suma a crudo
+derivada,log1p_crudo,float64,logaritmo transformado,"ln(1+crudo); auxiliar, no volumen físico"
+derivada,trimestre,int64,trimestre calendario,"1,2,3,4; derivado de fecha"
+derivada,atipico_crudo_diario / atipico_gas_diario,bool,verdadero/falso,"Fuera de Q1-1,5 IQR o Q3+1,5 IQR dentro de cada activo; se conserva"

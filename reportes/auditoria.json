@@ -1,0 +1,33 @@
+{
+  "filas_produccion_original": 802,
+  "columnas_vacias_eliminadas": 0,
+  "duplicados_exactos_extra": 9,
+  "claves_repetidas": 13,
+  "filas_redundantes_total": 13,
+  "filas_limpias": 789,
+  "celdas_conflictivas": 3,
+  "claves_conflictivas": 3,
+  "faltantes_crudo": 1,
+  "faltantes_gas": 2,
+  "filas_sin_precio": 15,
+  "meses_sin_precio": [
+    "2026-08"
+  ],
+  "codigos_sin_catalogo": [
+    "AB16"
+  ],
+  "filas_sin_catalogo": 36,
+  "huecos_interiores": 18,
+  "ceros_gas_conservados": 18,
+  "atipicos_crudo_diario": 52,
+  "atipicos_gas_diario": 42,
+  "n_meses": 56,
+  "n_activos": 16,
+  "n_precios": 67,
+  "precio_inicio": "2021-01-01",
+  "precio_fin": "2026-07-01",
+  "produccion_inicio": "2022-01-01",
+  "produccion_fin": "2026-08-01",
+  "semilla": 2026,
+  "n_minimo_descriptivo": 12
+}
