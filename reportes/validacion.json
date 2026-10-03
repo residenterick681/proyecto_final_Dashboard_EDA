@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "pruebas_datos_aprobadas": 12,
+  "pruebas_dashboard_aprobadas": 17,
+  "celdas_codigo_ejecutadas": 16,
+  "errores_notebook": 0,
+  "reproduccion_completa_local": "correcta",
+  "validacion_independiente_linux": "https://github.com/residenterick681/proyecto_final_Dashboard_EDA/actions/runs/37083425951",
+  "estado_validacion_linux": "success",
+  "publicacion_dashboard": "https://github.com/residenterick681/proyecto_final_Dashboard_EDA/actions/runs/37083426054",
+  "estado_publicacion": "success",
+  "http_dashboard_sin_autenticacion": 200,
+  "revision_visual_pdf": "20 paginas inspeccionadas, portada revisada tras insertar enlaces",
+  "fecha": "2026-10-02"
+}

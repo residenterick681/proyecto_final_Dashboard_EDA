@@ -6,7 +6,7 @@ Analiza tres archivos aportados por el usuario: producción mensual por activo, 
 
 ## Entrega
 
-- **Dashboard público:** Publicación en preparación; el enlace verificado se registra en docs/enlaces.json.
+- **Dashboard público:** https://residenterick681.github.io/proyecto_final_Dashboard_EDA/
 - **Informe único:** [Proyecto_Final_EDA_Ruano.pdf](docs/Proyecto_Final_EDA_Ruano.pdf), aproximadamente 0,3 MB, por debajo de 20 MB.
 - **Análisis con salidas:** [01_EDA_petroleo.ipynb](notebooks/01_EDA_petroleo.ipynb).
 - **Repositorio:** https://github.com/residenterick681/proyecto_final_Dashboard_EDA
@@ -50,7 +50,7 @@ python3.12 -m venv .venv
 
 Abrir `http://127.0.0.1:8501`. Detener con `Ctrl+C`. Se puede elegir otro puerto con `python app.py --port 8502` o abrir directamente `dashboard/index.html`; todos sus datos y gráficos se sirven localmente, sin CDN. En VS Code se puede abrir el notebook seleccionando el intérprete de `.venv`.
 
-El comando completo regenera datos depurados, auditoría, tablas, figuras, dashboard, notebook **ejecutado** y PDF. `--sin-notebook` omite solamente su reejecución, como alternativa rápida, pero no es el comando de validación completa. La ejecución no modifica los archivos originales ni publica automáticamente en servicios externos. La publicación se realiza desde la versión revisada del dashboard.
+El comando completo regenera datos depurados, auditoría, tablas, figuras, dashboard, notebook **ejecutado** y PDF. `--sin-notebook` omite solamente su reejecución, como alternativa rápida, pero no es el comando de validación completa. La ejecución no modifica los archivos originales ni publica automáticamente en servicios externos. GitHub Pages se actualiza automáticamente cuando cambian los archivos de dashboard/ en main, mediante .github/workflows/publicar.yml.
 
 ## Estructura
 

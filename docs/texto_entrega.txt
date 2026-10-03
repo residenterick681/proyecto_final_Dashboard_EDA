@@ -1,0 +1,9 @@
+Proyecto final: Dashboard EDA de producción petrolera
+
+Repositorio de GitHub:
+https://github.com/residenterick681/proyecto_final_Dashboard_EDA
+
+Dashboard público:
+https://residenterick681.github.io/proyecto_final_Dashboard_EDA/
+
+Archivo adjunto: Proyecto_Final_EDA_Ruano.pdf
