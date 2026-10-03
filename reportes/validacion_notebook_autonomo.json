@@ -8,5 +8,10 @@
   "ejecucion_desde_carpeta_vacia": "correcta",
   "comparacion_con_analisis_auditado": "tabla depurada y comparación interanual coinciden dentro de la precisión de exportación",
   "pruebas_especificas_notebook": 4,
-  "errores_en_celdas": 0
+  "errores_en_celdas": 0,
+  "lineas_codigo_comentadas": 624,
+  "lineas_codigo_sin_comentario": 0,
+  "equivalencia_logica_antes_despues": "AST idéntico en las 32 celdas; los comentarios no cambian los cálculos",
+  "salidas_identicas_a_version_anterior": 32,
+  "resultado_pruebas_especificas": "4 correctas"
 }

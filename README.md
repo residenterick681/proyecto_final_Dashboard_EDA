@@ -14,7 +14,7 @@ Analiza tres archivos aportados por el usuario: producción mensual por activo, 
 
 ## Notebook autónomo: un solo archivo para estudiar y ejecutar
 
-[01_EDA_petroleo.ipynb](notebooks/01_EDA_petroleo.ipynb) contiene **todo el proceso ejecutable** en orden: lectura del XLSX y los dos CSV, inspección, tipos, duplicados, conflictos, uniones, variables, atípicos, cobertura, estadísticas, correlaciones, remuestreo, segmentación, comparaciones y decisiones. Cada bloque tiene explicación técnica y resultados. Incluye nueve gráficas construidas dentro del notebook, las cinco preguntas complementarias y la sensibilidad a julio de 2025.
+[01_EDA_petroleo.ipynb](notebooks/01_EDA_petroleo.ipynb) contiene **todo el proceso ejecutable** en orden: lectura del XLSX y los dos CSV, inspección, tipos, duplicados, conflictos, uniones, variables, atípicos, cobertura, estadísticas, correlaciones, remuestreo, segmentación, comparaciones y decisiones. Cada bloque tiene explicación técnica y resultados. **Cada línea de código está comentada en español**, incluidas las importaciones, los filtros, los bucles, las funciones, las gráficas, las validaciones y la exportación. Los comentarios después de `#` explican la instrucción y no alteran los cálculos. Incluye nueve gráficas construidas dentro del notebook, las cinco preguntas complementarias y la sensibilidad a julio de 2025.
 
 Las tres fuentes originales están incorporadas como bytes codificados en Base64, en una celda identificada y plegable. Se verifica su SHA-256 al recuperarlas. **No importa módulos de `src`, no lee tablas procesadas ni carga imágenes previas.** Puedes copiar únicamente el `.ipynb` a otra carpeta y ejecutarlo con las bibliotecas indicadas en su introducción; no requiere descargar datos.
 
