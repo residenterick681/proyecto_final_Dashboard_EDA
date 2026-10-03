@@ -201,6 +201,11 @@ def build(root=ROOT):
         code(item['sha256'])
     p('Límites: no hay datos de pozos, costos, días operativos, calidad del crudo ni causas de cambios. El precio agregado no representa ingresos de cada activo. Las coberturas administrativas no están documentadas. Las observaciones mensuales son dependientes. Las asociaciones y decisiones no se extrapolan a la producción nacional.')
 
+    story.append(KeepTogether([
+        Paragraph('Declaración de uso de inteligencia artificial',styles['SubEDA']),
+        Paragraph('El <b>GRUPO 5</b> declara que, para la realización de este trabajo, se utilizó inteligencia artificial generativa (<b>Codex de OpenAI</b>) como apoyo en la organización del proyecto, la elaboración y revisión del código, el análisis e interpretación de los datos, la generación de gráficos y dashboards y la redacción y edición del informe. Los resultados presentados se obtuvieron a partir de los archivos de datos aportados; no se generaron observaciones de producción ficticias.',styles['BodyEDA'])
+    ]))
+
     target=root/'docs/Proyecto_Final_EDA_Grupo_5.pdf'
     def footer(canvas,doc):
         canvas.saveState();w,hh=A4

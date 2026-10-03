@@ -1,6 +1,6 @@
 {
   "paginas": 25,
-  "bytes": 706438,
+  "bytes": 706798,
   "autor": "GRUPO 5",
   "preguntas_adicionales": 5,
   "graficas_adicionales": 5,
@@ -13,5 +13,11 @@
   ],
   "controles_datos": "Concordancia con comparacion_interanual, produccion_limpia, resumen y auditoria verificada",
   "codigo_y_salidas_notebook": "Sin cambios; solo encabezado y pregunta editorial actualizados",
-  "revision_visual": "25 paginas revisadas en hojas de contacto; cinco preguntas revisadas individualmente; eje temporal de la pagina 16 corregido y vuelto a revisar."
+  "revision_visual": "25 paginas revisadas en hojas de contacto; cinco preguntas revisadas individualmente; eje temporal de la pagina 16 corregido y vuelto a revisar.",
+  "declaracion_ia": {
+    "presente": true,
+    "pagina": 25,
+    "ubicacion": "ultimo apartado del informe",
+    "revision_visual": "Sin recortes ni superposiciones"
+  }
 }
