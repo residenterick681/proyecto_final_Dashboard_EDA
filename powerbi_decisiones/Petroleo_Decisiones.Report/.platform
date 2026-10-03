@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Petróleo · Decisiones · Grupo 5"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e0879d5d-77d3-5946-a09c-57ee7c555fd0"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Grupo5-Decisiones-9f245dc8.json",
+  "dataColors": [
+    "#008C72",
+    "#DC3156",
+    "#007EB5",
+    "#7955C8",
+    "#F2AC20",
+    "#007C91",
+    "#DA6598",
+    "#64748B",
+    "#799F21",
+    "#C06418",
+    "#3954B7",
+    "#9F5477",
+    "#39966D",
+    "#8C7B42",
+    "#758DA8",
+    "#B697CC"
+  ],
+  "good": "#008C72",
+  "bad": "#DC3156",
+  "neutral": "#F2AC20",
+  "background": "#FFFFFF",
+  "foreground": "#172745",
+  "tableAccent": "#007EB5",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI",
+      "fontSize": 13,
+      "color": "#172745"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11,
+      "color": "#172745"
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "fontSize": 32,
+      "color": "#007EB5"
+    }
+  }
+}

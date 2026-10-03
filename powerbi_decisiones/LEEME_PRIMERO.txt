@@ -1,0 +1,43 @@
+﻿POWER BI · DECISIONES SOBRE PRODUCCIÓN · GRUPO 5
+
+ABRIR
+1. Extrae TODO el ZIP en una carpeta nueva. Mantén juntas las carpetas .Report y .SemanticModel.
+2. Abre Petroleo_Decisiones.pbip en Power BI Desktop.
+3. Pulsa Inicio > Actualizar. El proyecto incorpora los datos en consultas M; no necesita rutas locales ni credenciales para cargarlos.
+4. Recorre las cinco pestañas y selecciona activos/años en sus filtros. Borra una selección con el borrador del filtro o vuelve a hacer clic en el gráfico.
+5. Después de actualizar, puedes guardar un .pbix con Archivo > Guardar como. No cambies la extensión del .pbip.
+
+GUION PARA DECIDIR
+01 DECIDIR: producción comparable, variación, sensibilidad sin julio, cascada de aportes, balance de aumentos/descensos y evolución mensual. Validar la base excepcional de julio 2025 antes de declarar mejora sostenida.
+02 PRIORIZAR ACTIVOS: mapa de burbujas (volumen/cambio), barras de impacto absoluto y cambio relativo. Asignar revisión por impacto, no solo por porcentaje.
+03 PROTEGER VOLUMEN: mapa de árbol, ranking de participación, anillo y columnas mensuales de concentración. Planear continuidad de SA/AU/SH.
+04 TENDENCIA Y PRECIO: dos series separadas, dispersión de cambios y r de Pearson con n. No fijar metas operativas basadas exclusivamente en precio.
+05 CALIDAD PARA DECIDIR: mapa de calor activo/año, faltantes y conflictos. Validar antes de certificar; conserva n y alertas de grupos pequeños.
+
+FILTROS Y PERÍODOS
+Páginas 1 y 2: comparación fija enero-agosto 2026 contra enero-agosto 2025. Catorce activos con 8 meses válidos por año y 243 días en cada período. Solo el filtro de activos modifica esta comparación. AIT y AB16 no tienen pares completos comunes: al seleccionarlos se muestra vacío, no cero. No se unieron sus códigos.
+Página 3: enero-agosto 2026, quince activos observados. SA/AU/SH es un grupo fijo, no un top 3 recalculado por filtro. Su porcentaje es sobre la selección vigente.
+Página 4: cohorte histórica fija de 11 activos completos (AM, AP, AU, CU, EY, IN, ITT, LI, OY, PA, SA). Los filtros de tiempo ajustan las series y los pares. Precio se cuenta una vez por mes. No se filtra por activo. Los cambios se calculan contra el mes calendario anterior con datos disponibles, antes de filtrar; seleccionar un mes conserva su variación contra el mes anterior, aunque este no esté seleccionado.
+Página 5: historial completo inicialmente; filtros por año y activo. Cobertura válida = meses con crudo válido / meses entre primer y último registro de cada activo. Los meses fuera de cobertura no se penalizan; los huecos internos y conflictos sí.
+Los filtros son independientes por página. Los rótulos "historial completo" o "con todos los activos" muestran referencias fijas; los indicadores y gráficos se recalculan según sus filtros.
+
+REGLAS PARA INTERPRETAR
+Menos de 12 meses por activo activa precaución descriptiva; no es una prueba estadística. La comparación interanual tiene n=8 por activo y año, 112 observaciones por año con todos los activos. Una mejora observada significa mayor producción diaria, no eficiencia demostrada. Faltan costos, días operativos, pozos y causas de paradas.
+Umbrales propuestos para revisión: pérdida de 500 bbl/día o más y aumento de 3.000 bbl/día o más. Se documentan como criterios de gestión, no normas ni estimaciones de riesgo. Responsable: Operaciones/Jefatura de activos; plazo de revisión: 30 días. No implican inversiones ni cambios físicos automáticos.
+La correlación se calcula sobre cambios pareados, no niveles ni 789 registros repetidos. Con n<12 se oculta r. La asociación no es causal y los meses no son independientes. El precio de exportación de referencia no es precio específico de cada activo y precio por producción no equivale a ingreso.
+No hay coordenadas o ubicaciones verificadas en las fuentes. Por eso se incluyen mapas de prioridades, volumen y cobertura, no posiciones geográficas supuestas.
+
+CONTROLES ESPERADOS SIN FILTROS
+Comparación: 352.214,84 bbl/día en 2026; 327.535,93 en 2025; +24.678,91 bbl/día (+7,53 %); 11 aumentos, 3 descensos. IN: -837,67 bbl/día (-6,25 %). AV: -3,80; AM: -0,96 bbl/día.
+Sensibilidad: siete de ocho meses agregados muestran descenso interanual. Julio 2026 contra julio 2025: +238,63 %. Excluyendo julio de AMBOS años, el cambio es -2,2592 %; n=7 meses/activo/año, 212 días/año. No se elimina julio de la fuente ni de la comparación principal: se explicita el efecto de la base. Antes de afirmar mejora sostenida, Planificación debe contrastar esa base en 30 días con información operativa; los datos no prueban la causa de la caída de 2025.
+2026 observado: 88.304.451,13 bbl; 363.392,80 bbl/día; 120 registros; SA/AU/SH 51,75 %.
+Cambios: 54 pares; r=0,016568. Historial de producción: 789 registros, 788 crudo válido; 18 huecos, 3 celdas conflictivas; AB16 sin nombre; agosto 2026 sin precio.
+
+REPRODUCIR Y EDITAR
+Desde la raíz del repositorio: python -m src.export_powerbi_decisiones
+Los CSV y consultas M son respaldos legibles. El modelo contiene los CSV codificados en Base64. Editar datos/*.csv no altera por sí solo el modelo: regenera el proyecto o cambia su consulta M.
+Medidas_DAX.txt documenta todas las medidas. manifest.json registra conteos y huellas de los datos. validacion_powerbi.json describe las comprobaciones realizadas y las limitaciones de verificación en Desktop.
+Se mantiene por separado el proyecto básico anterior en powerbi/.
+
+DECLARACIÓN DE USO DE IA
+Se utilizó inteligencia artificial (Codex/OpenAI) como apoyo para programar, analizar datos, proponer la presentación visual y redactar documentación. No se inventaron registros de producción ni ubicaciones geográficas. GRUPO 5 debe revisar la interpretación y asume la responsabilidad académica de la entrega.

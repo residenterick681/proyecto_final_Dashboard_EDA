@@ -1,0 +1,45 @@
+{
+  "motor": "Power BI Desktop 2.158.1177.0 / Analysis Services local",
+  "comprobaciones_numericas": 10,
+  "resultado": "correcto",
+  "escenarios": {
+    "total": {
+      "[bpd_2026]": 352214.83839506103,
+      "[cambio_pct]": 0.0753471936990432,
+      "[cambio_bpd]": 24678.912827160035,
+      "[sin_julio]": -0.02259238395228058,
+      "[descensos]": 3,
+      "[n_pares]": 54,
+      "[r]": 0.01656818492513316,
+      "[volumen_2026]": 88304451.13000004,
+      "[peso_tres]": 0.5174798780270725,
+      "[huecos]": 18,
+      "[conflictos]": 3
+    },
+    "indillana": {
+      "[bpd_2026]": 12555.692139918,
+      "[cambio_pct]": -0.06254359635671133,
+      "[descensos]": 1,
+      "[n]": 8
+    },
+    "sin_comparacion": {
+      "[bpd_2026]": null,
+      "[cambio_pct]": null,
+      "[sin_julio]": null
+    },
+    "n_pequeno": {
+      "[pares]": 7,
+      "[r]": null,
+      "[aviso]": "PRECAUCIÓN: menos de 12 pares; r se oculta."
+    },
+    "calidad_AV_2024": {
+      "[cobertura]": 0.0,
+      "[huecos]": 12,
+      "[color]": "#FFADB9"
+    },
+    "precio_independiente": {
+      "[precio]": 75.89714285714285,
+      "[n_precio]": 7
+    }
+  }
+}

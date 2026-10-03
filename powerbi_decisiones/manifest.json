@@ -1,0 +1,43 @@
+{
+  "grupo": "GRUPO 5",
+  "tablas": {
+    "Produccion": 789,
+    "Precios": 67,
+    "Activos": 16,
+    "Calendario": 68,
+    "Cobertura": 896,
+    "Comparacion": 14,
+    "SerieComparable": 112,
+    "Cohorte": 56,
+    "Cambios": 54
+  },
+  "relaciones": 9,
+  "medidas": 58,
+  "paginas": 5,
+  "visuales_por_tipo": {
+    "textbox": 30,
+    "slicer": 7,
+    "card": 19,
+    "clusteredBarChart": 3,
+    "pivotTable": 1,
+    "donutChart": 2,
+    "waterfallChart": 1,
+    "lineChart": 3,
+    "barChart": 1,
+    "scatterChart": 2,
+    "clusteredColumnChart": 1,
+    "treemap": 1,
+    "columnChart": 1
+  },
+  "sha256_csv": {
+    "Activos.csv": "de4d6337367c896bda66a94002c755e4158cfe013d6453fab2a482cdb3bb5d87",
+    "Calendario.csv": "2af5650ac138a06e231728483af054755ef50c5087c69f5dbf361b99307a7b9b",
+    "Cambios.csv": "354e79e9c927091ed721e18da6dfedc118f4bf8d59c318b4f372f8afb5a08184",
+    "Cobertura.csv": "ac42c4979df1be3002516bc066ac1f5fb2b26649f923a92d4f37d32526ae1d0d",
+    "Cohorte.csv": "e588ca89506c9bc8fb6f1bbf479a4edc272c7a3c705e9e457bc266cfcb099ab7",
+    "Comparacion.csv": "38c6fb516a18b3cfb4fd9887a0fcf4ac58fb8588f136a4de5cf95c6b26309b33",
+    "Precios.csv": "5ceb29e171c4e6ee54008d879a712a8daefff8f34d61655775f62a604538605f",
+    "Produccion.csv": "1e9f9337e4a10b951e69085661ae5156b67ffce29901f900f7f87017e01956e6",
+    "SerieComparable.csv": "b6bf7ab08e3eb598f46c622334d0c1a4d2756404c4fea48b695e95469e324e2e"
+  }
+}

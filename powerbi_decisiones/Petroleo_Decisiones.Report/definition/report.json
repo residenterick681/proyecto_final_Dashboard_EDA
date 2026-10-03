@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "layoutOptimization": "None",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU06",
+      "reportVersionAtImport": "5.55",
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Grupo5-Decisiones-9f245dc8.json",
+      "reportVersionAtImport": "5.55",
+      "type": "RegisteredResources"
+    }
+  },
+  "resourcePackages": [
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Grupo5-Decisiones-9f245dc8.json",
+          "path": "Grupo5-Decisiones-9f245dc8.json",
+          "type": "CustomTheme"
+        }
+      ]
+    }
+  ]
+}

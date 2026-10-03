@@ -14,15 +14,19 @@ Analiza tres archivos aportados por el usuario: producción mensual por activo, 
 
 ## Versión para Power BI
 
-En [powerbi/](powerbi/) se entrega **Petroleo_EDA.pbip**, con cinco tablas relacionadas, 21 medidas DAX y tres páginas: panorama, calidad y detalle auditable. Extrae o descarga la carpeta completa, abre el `.pbip` con Power BI Desktop y pulsa **Inicio > Actualizar** para cargar los datos incorporados. Después puedes guardar una copia `.pbix` desde Desktop.
+La versión recomendada está en [powerbi_decisiones/](powerbi_decisiones/): **Petroleo_Decisiones.pbip**, nueve tablas relacionadas, 58 medidas DAX y cinco páginas orientadas a decidir: **Decidir, Priorizar activos, Proteger volumen, Tendencia y precio, Calidad para decidir**. Incluye 16 gráficos/mapas analíticos, indicadores, filtros y cinco acciones propuestas con responsable, indicador y límite. Se usan gráficos nativos editables, fondo azul oscuro y colores de contraste; la única matriz es el mapa de calor de cobertura.
 
-No requiere rutas a los archivos originales ni credenciales: las consultas M contienen una copia de los datos depurados. Los precios mensuales están separados de la producción para evitar duplicar su promedio por activo. Incluye las alertas de calidad, n por grupo, CSV de respaldo, [medidas DAX](powerbi/Medidas_DAX.txt) e [instrucciones](powerbi/LEEME_POWER_BI.txt).
+Extrae o descarga **toda la carpeta**, abre el `.pbip` con Power BI Desktop y pulsa **Inicio > Actualizar** si los datos no se cargan automáticamente. Después puedes guardar un `.pbix` desde Desktop. Las consultas M incorporan los datos depurados: no requieren rutas a archivos originales ni credenciales. Consulta las [instrucciones](powerbi_decisiones/LEEME_PRIMERO.txt) y las [medidas DAX](powerbi_decisiones/Medidas_DAX.txt).
 
-Corrección de compatibilidad: el contenido `definition/version.json` usa la versión **2.0.0**, independiente de `definition.pbir` (**4.0**). Se incluyen los metadatos `.platform` y el índice de páginas actualizado. Si abriste la primera entrega y apareció `visualContainers`, cierra ese informe y abre esta revisión desde una carpeta nueva.
+**Comparación y sensibilidad:** las páginas 1–2 comparan enero-agosto 2026 / 2025 con los mismos 14 activos y 243 días por año. El aumento agregado de **7,53 %** depende de la baja base de julio 2025: siete de ocho meses caen y, al excluir julio de ambos años, la variación es **-2,26 %** (siete meses y 212 días por año). La sensibilidad no elimina observaciones de la fuente ni sustituye la comparación completa. Se requiere información operativa para explicar la causa; no demuestra eficiencia.
 
-Para regenerarlo tras ejecutar el análisis: `python -m src.export_powerbi`. Este comando sobrescribe la definición generada; guarda por separado cualquier personalización hecha en Power BI. Los CSV de respaldo no son una conexión automática al modelo.
+La página 3 cubre los 15 activos observados en 2026; la página 4 conserva la cohorte histórica de 11 activos, con filtros temporales. Los precios se cuentan una sola vez por mes. El mapa de prioridades es de burbujas y el mapa de cobertura es de calor: las fuentes no contienen coordenadas verificadas para un mapa geográfico.
 
-Se verificaron los datos, las referencias, los esquemas PBIP/PBIR y la deserialización del modelo mediante las bibliotecas de Microsoft instaladas. **La apertura, actualización DAX y presentación en Power BI Desktop quedan pendientes de comprobación en la aplicación.** El proyecto se entrega sin caché binaria; por eso necesita una primera actualización.
+La versión de decisiones se abrió y representó en **Power BI Desktop 2.158.1177.0**. Se ejecutaron consultas DAX con escenarios filtrados para confirmar indicadores, selección sin comparación, n<12, cobertura y precios. También se validan esquemas PBIP/PBIR, relaciones y datos incorporados. Las evidencias están en `powerbi_decisiones/validacion_powerbi.json` y `validacion_dax.json`. El proyecto portable no incluye caché binaria. La validación del contexto de filtros mediante DAX no equivale a recorrer manualmente cada combinación de clics.
+
+Para regenerar: `python -m src.export_powerbi_decisiones`, después del análisis. También forma parte de `python -m src.reproducir`. Regenerar sobrescribe la definición: conserva aparte tus cambios manuales. Editar los CSV de respaldo no modifica por sí solo las consultas incorporadas.
+
+La versión básica anterior permanece en [powerbi/](powerbi/) como respaldo. Ambas conservan la corrección de compatibilidad: contenido PBIR **2.0.0**, `definition.pbir` **4.0**, archivos `.platform` e índice de páginas.
 
 El informe incorpora cinco preguntas adicionales con justificación basada en los datos, respuestas, gráficos y límites de interpretación. Sus resultados y figuras se regeneran desde `src/preguntas.py`.
 
