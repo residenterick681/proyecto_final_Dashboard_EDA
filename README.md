@@ -8,9 +8,19 @@ Analiza tres archivos aportados por el usuario: producción mensual por activo, 
 
 - **Dashboard público:** https://residenterick681.github.io/proyecto_final_Dashboard_EDA/
 - **Informe único:** [Proyecto_Final_EDA_Grupo_5.pdf](docs/Proyecto_Final_EDA_Grupo_5.pdf), aproximadamente 0,7 MB, por debajo de 20 MB.
-- **Análisis con salidas:** [01_EDA_petroleo.ipynb](notebooks/01_EDA_petroleo.ipynb).
+- **Notebook autónomo, paso a paso, con datos y salidas incorporados:** [01_EDA_petroleo.ipynb](notebooks/01_EDA_petroleo.ipynb).
 - **Repositorio:** https://github.com/residenterick681/proyecto_final_Dashboard_EDA
 - **Texto listo para el aula:** [texto_entrega.txt](docs/texto_entrega.txt).
+
+## Notebook autónomo: un solo archivo para estudiar y ejecutar
+
+[01_EDA_petroleo.ipynb](notebooks/01_EDA_petroleo.ipynb) contiene **todo el proceso ejecutable** en orden: lectura del XLSX y los dos CSV, inspección, tipos, duplicados, conflictos, uniones, variables, atípicos, cobertura, estadísticas, correlaciones, remuestreo, segmentación, comparaciones y decisiones. Cada bloque tiene explicación técnica y resultados. Incluye nueve gráficas construidas dentro del notebook, las cinco preguntas complementarias y la sensibilidad a julio de 2025.
+
+Las tres fuentes originales están incorporadas como bytes codificados en Base64, en una celda identificada y plegable. Se verifica su SHA-256 al recuperarlas. **No importa módulos de `src`, no lee tablas procesadas ni carga imágenes previas.** Puedes copiar únicamente el `.ipynb` a otra carpeta y ejecutarlo con las bibliotecas indicadas en su introducción; no requiere descargar datos.
+
+En Jupyter o VS Code selecciona Python y usa **Reiniciar kernel y ejecutar todo**. Ya contiene resultados guardados para leerlo sin ejecutar. Al ejecutarlo crea `salidas_EDA_notebook/` con copias de fuentes, tablas y figuras; esta carpeta es una salida, no un requisito de entrada. Los apartados T1–T8 están junto al código correspondiente y tienen un índice al final. La declaración de IA permanece al final del documento.
+
+Se comprobó su ejecución desde una carpeta vacía: **32 celdas de código, nueve figuras y 23 controles internos correctos**. Una prueba adicional ejecuta el notebook aislado y compara su tabla depurada y comparación interanual con el análisis auditado del proyecto. `src/notebook.py` conserva únicamente la herramienta de mantenimiento para regenerar el `.ipynb`; no se necesita para estudiarlo o ejecutarlo.
 
 ## Versión para Power BI
 

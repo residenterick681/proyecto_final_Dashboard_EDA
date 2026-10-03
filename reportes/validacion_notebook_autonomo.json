@@ -1,0 +1,12 @@
+{
+  "archivo": "notebooks/01_EDA_petroleo.ipynb",
+  "celdas_totales": 66,
+  "celdas_codigo": 32,
+  "datos_originales_incorporados": 3,
+  "figuras_incorporadas": 9,
+  "comprobaciones_internas_correctas": 23,
+  "ejecucion_desde_carpeta_vacia": "correcta",
+  "comparacion_con_analisis_auditado": "tabla depurada y comparación interanual coinciden dentro de la precisión de exportación",
+  "pruebas_especificas_notebook": 4,
+  "errores_en_celdas": 0
+}
