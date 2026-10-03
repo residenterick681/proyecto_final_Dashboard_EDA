@@ -1,8 +1,11 @@
 ﻿PROYECTO POWER BI · PETRÓLEO Y GAS
 Autor: Erick Leandro Ruano Lara
 
+CORRECCIÓN DE COMPATIBILIDAD
+Esta revisión corrige la versión del contenido PBIR a 2.0.0, incorpora los metadatos .platform y actualiza el índice de páginas. La versión de definition.pbir permanece en 4.0 porque corresponde a un archivo distinto.
+
 ABRIR Y ANALIZAR
-1. Extrae TODO el ZIP en una carpeta local. Conserva juntas las carpetas .Report y .SemanticModel.
+1. Cierra el informe anterior y extrae TODO el ZIP en una carpeta local NUEVA. Conserva juntas las carpetas .Report y .SemanticModel.
 2. Abre Petroleo_EDA.pbip con Power BI Desktop actualizado. También puedes abrir Petroleo_EDA.Report/definition.pbir.
 3. Pulsa Inicio > Actualizar para cargar los datos incorporados. El proyecto PBIP no incluye caché binaria; los visuales necesitan esta primera actualización.
 4. Analiza las páginas Panorama, Calidad y Detalle. Panorama inicia en 2026; las otras páginas muestran el historial. Los filtros de cada página son independientes.

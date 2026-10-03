@@ -11,6 +11,25 @@ class PowerBITests(unittest.TestCase):
         cls.folder = ROOT / 'powerbi'
         cls.model = json.loads((cls.folder/'Petroleo_EDA.SemanticModel/model.bim').read_text(encoding='utf-8'))['model']
 
+    def test_desktop_report_package_compatibility(self):
+        report = self.folder / 'Petroleo_EDA.Report'
+        read = lambda p: json.loads(p.read_text(encoding='utf-8'))
+        # El schema permite 4.0.0, pero el formato de contenido de Desktop es 2.0.0.
+        self.assertEqual(read(report/'definition/version.json')['version'], '2.0.0')
+        self.assertEqual(read(report/'definition.pbir')['version'], '4.0')
+        index = read(report/'definition/pages/pages.json')
+        self.assertIn(index['activePageName'], index['pageOrder'])
+        self.assertEqual(len(index['pageOrder']), len(set(index['pageOrder'])))
+        for name in index['pageOrder']:
+            page_path = report/'definition/pages'/name/'page.json'
+            self.assertTrue(page_path.is_file())
+            self.assertEqual(read(page_path)['name'], name)
+            self.assertGreater(len(list(page_path.parent.glob('visuals/*/visual.json'))), 0)
+        for folder, kind in [('Petroleo_EDA.Report','Report'),('Petroleo_EDA.SemanticModel','SemanticModel')]:
+            platform = read(self.folder/folder/'.platform')
+            self.assertEqual(platform['metadata']['type'], kind)
+            self.assertTrue(platform['config']['logicalId'])
+
     def test_relations_unique_keys_and_referential_integrity(self):
         for rel in self.model['relationships']:
             fact = self.tables[rel['fromTable']][rel['fromColumn']]

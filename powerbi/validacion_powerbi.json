@@ -1,5 +1,5 @@
 {
-  "esquemas_json_validos": 37,
+  "esquemas_json_validos": 39,
   "errores_esquema": [],
   "archivos_validados": [
     "Petroleo_EDA.Report\\definition\\report.json",
@@ -38,23 +38,26 @@
     "Petroleo_EDA.Report\\definition\\pages\\Panorama\\visuals\\serie_precio\\visual.json",
     "Petroleo_EDA.pbip",
     "Petroleo_EDA.Report\\definition.pbir",
-    "Petroleo_EDA.SemanticModel\\definition.pbism"
+    "Petroleo_EDA.SemanticModel\\definition.pbism",
+    "Petroleo_EDA.Report\\.platform",
+    "Petroleo_EDA.SemanticModel\\.platform"
   ],
   "apertura_powerbi_desktop_verificada": false,
   "refresh_motor_dax_verificado": false,
-  "pruebas_unitarias_totales": 17,
-  "pruebas_powerbi": 5,
+  "pruebas_unitarias_totales": 18,
+  "pruebas_powerbi": 6,
   "resultado_pruebas": "OK",
   "modelo_tabular_deserializado": true,
-  "validador_modelo": "Microsoft.AnalysisServices.Tabular.JsonSerializer; CompatibilityMode.PowerBI; bibliotecas incluidas en Power BI Desktop 2.158.1177.0",
+  "nota_modelo": "Model.bim sin cambios respecto a la revision validada con Microsoft.AnalysisServices.Tabular.JsonSerializer en modo PowerBI.",
   "model_bim_sha256": "57425b9d051acfa78d05b38e8dd9af7f07852f72fe41b4d702c7740061449fa9",
-  "controles_2026": {
-    "registros": 120,
-    "crudo_bbl": 88304451.13,
-    "dias": 243,
-    "aporte_diario_bbl": 363392.803004115,
-    "meses_con_precio": 7,
-    "precio_promedio_usd": 75.897142857
+  "correccion": {
+    "error_reportado": "Cannot read properties of undefined (reading 'visualContainers')",
+    "version_contenido_anterior": "4.0.0",
+    "version_contenido_corregida": "2.0.0",
+    "version_definition_pbir": "4.0",
+    "metadatos_platform": true,
+    "indice_paginas_schema": "1.1.0",
+    "referencia_microsoft": "https://github.com/microsoft/BCApps/blob/main/src/Apps/W1/PowerBIReports/Power%20BI%20Files/Projects%20app/Projects%20app.Report/definition/version.json"
   },
-  "nota_esquemas": "El resolutor normaliza el identificador schema.embedded.json al archivo publico schema-embedded.json, ambos nombrados en los esquemas de Microsoft."
+  "nota_esquemas": "El resolutor normaliza el identificador schema.embedded.json al archivo publico schema-embedded.json."
 }

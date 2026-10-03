@@ -181,12 +181,19 @@ def card(page,name,measure,x,w=323,title=None):
 
 
 def create_report():
+    # La version del contenido PBIR es distinta de la version 4.0 de definition.pbir.
+    # Referencia: microsoft/BCApps, Projects app.Report/definition/version.json.
+    for folder, kind in [(REPORT, 'Report'), (MODEL, 'SemanticModel')]:
+        save(OUT/folder/'.platform', {
+            '$schema':BASE+'gitIntegration/platformProperties/2.0.0/schema.json',
+            'metadata':{'type':kind,'displayName':'Petroleo EDA'},
+            'config':{'version':'2.0','logicalId':tagged('platform/'+kind)}})
     save(OUT/'Petroleo_EDA.pbip', {'$schema':BASE+'pbip/pbipProperties/1.0.0/schema.json','version':'1.0','artifacts':[{'report':{'path':REPORT}}],'settings':{'enableAutoRecovery':True}})
     save(OUT/REPORT/'definition.pbir', {'$schema':BASE+'item/report/definitionProperties/2.0.0/schema.json','version':'4.0','datasetReference':{'byPath':{'path':'../'+MODEL}}})
-    save(OUT/REPORT/'definition/version.json', {'$schema':DEF+'versionMetadata/1.0.0/schema.json','version':'4.0.0'})
+    save(OUT/REPORT/'definition/version.json', {'$schema':DEF+'versionMetadata/1.0.0/schema.json','version':'2.0.0'})
     save(OUT/REPORT/'definition/report.json', {'$schema':DEF+'report/1.0.0/schema.json','layoutOptimization':'None',
         'themeCollection':{'baseTheme':{'name':'CY24SU06','reportVersionAtImport':'5.55','type':'SharedResources'}}})
-    save(OUT/REPORT/'definition/pages/pages.json', {'$schema':DEF+'pagesMetadata/1.0.0/schema.json','pageOrder':['Panorama','Calidad','Detalle'],'activePageName':'Panorama'})
+    save(OUT/REPORT/'definition/pages/pages.json', {'$schema':DEF+'pagesMetadata/1.1.0/schema.json','pageOrder':['Panorama','Calidad','Detalle'],'activePageName':'Panorama'})
     page('Panorama','01 · Panorama productivo')
     for name,measure,x in [('crudo','Crudo observado (bbl)',24),('diario','Aporte diario observado (bbl)',367),('precio','Precio promedio (USD/bbl)',710),('n','N crudo',1053)]:card('Panorama',name,measure,x)
     visual('Panorama','serie_crudo','lineChart',24,320,815,270,'Producción mensual observada · bbl',
@@ -216,8 +223,11 @@ def create_docs(tables):
     (OUT/'LEEME_POWER_BI.txt').write_text('''PROYECTO POWER BI · PETRÓLEO Y GAS
 Autor: Erick Leandro Ruano Lara
 
+CORRECCIÓN DE COMPATIBILIDAD
+Esta revisión corrige la versión del contenido PBIR a 2.0.0, incorpora los metadatos .platform y actualiza el índice de páginas. La versión de definition.pbir permanece en 4.0 porque corresponde a un archivo distinto.
+
 ABRIR Y ANALIZAR
-1. Extrae TODO el ZIP en una carpeta local. Conserva juntas las carpetas .Report y .SemanticModel.
+1. Cierra el informe anterior y extrae TODO el ZIP en una carpeta local NUEVA. Conserva juntas las carpetas .Report y .SemanticModel.
 2. Abre Petroleo_EDA.pbip con Power BI Desktop actualizado. También puedes abrir Petroleo_EDA.Report/definition.pbir.
 3. Pulsa Inicio > Actualizar para cargar los datos incorporados. El proyecto PBIP no incluye caché binaria; los visuales necesitan esta primera actualización.
 4. Analiza las páginas Panorama, Calidad y Detalle. Panorama inicia en 2026; las otras páginas muestran el historial. Los filtros de cada página son independientes.

@@ -18,6 +18,8 @@ En [powerbi/](powerbi/) se entrega **Petroleo_EDA.pbip**, con cinco tablas relac
 
 No requiere rutas a los archivos originales ni credenciales: las consultas M contienen una copia de los datos depurados. Los precios mensuales están separados de la producción para evitar duplicar su promedio por activo. Incluye las alertas de calidad, n por grupo, CSV de respaldo, [medidas DAX](powerbi/Medidas_DAX.txt) e [instrucciones](powerbi/LEEME_POWER_BI.txt).
 
+Corrección de compatibilidad: el contenido `definition/version.json` usa la versión **2.0.0**, independiente de `definition.pbir` (**4.0**). Se incluyen los metadatos `.platform` y el índice de páginas actualizado. Si abriste la primera entrega y apareció `visualContainers`, cierra ese informe y abre esta revisión desde una carpeta nueva.
+
 Para regenerarlo tras ejecutar el análisis: `python -m src.export_powerbi`. Este comando sobrescribe la definición generada; guarda por separado cualquier personalización hecha en Power BI. Los CSV de respaldo no son una conexión automática al modelo.
 
 Se verificaron los datos, las referencias, los esquemas PBIP/PBIR y la deserialización del modelo mediante las bibliotecas de Microsoft instaladas. **La apertura, actualización DAX y presentación en Power BI Desktop quedan pendientes de comprobación en la aplicación.** El proyecto se entrega sin caché binaria; por eso necesita una primera actualización.
