@@ -1,0 +1,52 @@
+[
+  {
+    "numero": 1,
+    "titulo": "¿Mejoró la producción diaria conjunta entre enero-agosto de 2025 y 2026 al comparar los mismos activos?",
+    "justificacion": "Basada en los datos: existen 14 activos con crudo válido en los ocho meses de ambos períodos. Cada año aporta 112 registros activo-mes y 243 días calendario. Esta coincidencia permite comparar sin mezclar un año parcial con uno completo ni incorporar códigos presentes solo en un período.",
+    "figura": "06_pregunta_comparacion.png",
+    "respuesta": "Sí, en volumen por día calendario de esta cohorte: pasa de 327.535,93 a 352.214,84 bbl/día, un aumento de 24.678,91 bbl/día (+7,53%). Se calcula sumando barriles y dividiendo por los días distintos del período; no se promedian sin ponderación las tasas mensuales.",
+    "implicacion": "El crecimiento conjunto es un avance observable del nivel productivo. Conviene estudiar los activos que aportan ese aumento para formular hipótesis de mejora.",
+    "limite": "n = 8 meses por activo y año: menos de un ciclo anual. El aumento no demuestra mayor eficiencia, rentabilidad ni efecto de una intervención. AIT y AB16 se excluyen por cobertura no comparable.",
+    "fuente": "reportes/comparacion_interanual.csv; reportes/resumen.json. Cohorte: AM, AP, AU, AV, CU, EY, IN, ITT, LA, LI, OY, PA, SA y SH."
+  },
+  {
+    "numero": 2,
+    "titulo": "¿Qué activos conviene revisar por sus caídas y cuáles aportan los mayores aumentos de producción?",
+    "justificacion": "Basada en los datos: la comparación homogénea ofrece cambios absolutos y porcentuales para 14 activos, con n = 8 meses en cada año. Combinar ambas medidas evita que una caída porcentual grande en un activo pequeño desplace una pérdida de volumen mucho mayor.",
+    "figura": "07_pregunta_activos.png",
+    "respuesta": "11 activos aumentan y 3 disminuyen. IN presenta la mayor caída absoluta: -837,67 bbl/día (-6,25%). AV cae más en porcentaje (-14,38%), pero su diferencia es solo -3,80 bbl/día. SH aporta +4.839,24 bbl/día (+9,67%) y SA +3.775,47 (+5,57%); AP crece +98,13% desde una base menor.",
+    "implicacion": "Priorizar la conciliación y revisión operativa de IN por la magnitud de la pérdida; investigar en SH y SA qué condiciones acompañaron los aumentos antes de intentar replicarlas.",
+    "limite": "La prioridad se basa únicamente en volumen observado. Sin costos, riesgos, pozos, paradas ni días operativos no se pueden atribuir causas ni recomendar una inversión específica.",
+    "fuente": "reportes/comparacion_interanual.csv. Barras: diferencia absoluta; etiquetas: diferencia absoluta y variación porcentual."
+  },
+  {
+    "numero": 3,
+    "titulo": "¿En qué activos se concentra la producción y dónde tendría mayor alcance una revisión de continuidad operativa?",
+    "justificacion": "Basada en los datos: enero-agosto de 2026 contiene 120 registros válidos de crudo, distribuidos entre 15 activos con ocho meses cada uno. Esta cobertura común permite medir la contribución de cada activo al volumen total del período.",
+    "figura": "08_pregunta_concentracion.png",
+    "respuesta": "SA, AU y SH reúnen el 51,75% de los 88.304.451,13 barriles observados. El resto de los 12 activos aporta 48,25%. La participación mide concentración del volumen; no determina cuál activo es más eficiente.",
+    "implicacion": "Dar seguimiento prioritario a la continuidad de esos tres activos, junto con los criterios de seguridad y mantenimiento, porque representan más de la mitad del volumen observado.",
+    "limite": "n = 8 meses por activo; es una concentración de un período parcial. No es una estimación de reservas, de rentabilidad ni de producción nacional. Esta selección de 15 activos difiere de la cohorte interanual de 14.",
+    "fuente": "data/procesados/produccion_limpia.csv, filtro anio = 2026 y mes <= 8. Participación = volumen del activo / volumen total observado."
+  },
+  {
+    "numero": 4,
+    "titulo": "¿Las variaciones del precio del crudo acompañan las variaciones mensuales de producción de una cohorte estable?",
+    "justificacion": "Basada en los datos: once activos tienen crudo válido durante los 56 meses productivos. Tras unir un solo precio por mes hay 55 meses con precio y 54 cambios mensuales pareados. El precio no se repite por activo para inflar el tamaño del análisis.",
+    "figura": "09_pregunta_precio.png",
+    "respuesta": "No se observa una asociación lineal contemporánea fuerte: Pearson r = 0,017 y Spearman = 0,064. El intervalo exploratorio del 95% por bloques de tres meses es [-0,202; 0,192], que incluye cero. La nube de puntos no ofrece evidencia de una relación lineal marcada.",
+    "implicacion": "Mantener el precio como contexto y buscar variables operativas para explicar las variaciones de producción; estos resultados no respaldan usar solo el precio para fijar metas productivas.",
+    "limite": "n = 54 pares temporales, no independientes. Se analizan cambios en el mismo mes; no se estudian efectos rezagados ni causalidad. No se concluye que el precio nunca influya.",
+    "fuente": "reportes/cambios_mensuales.csv y resumen.json. Remuestreo exploratorio: 2.000 réplicas, bloques de 3 meses y semilla 2026."
+  },
+  {
+    "numero": 5,
+    "titulo": "¿Qué problemas de calidad deben resolverse antes de interpretar una variación como mejora o deterioro real?",
+    "justificacion": "Basada en los datos: la auditoría encuentra 13 claves repetidas y tres celdas conflictivas. La cobertura muestra 18 huecos internos; AB16 tiene 36 registros sin nombre validado y agosto de 2026 carece de precio para sus 15 registros productivos.",
+    "figura": "10_pregunta_calidad.png",
+    "respuesta": "La consolidación elimina 13 filas redundantes y deja 789 claves únicas. Persisten tres celdas por conciliar en agosto de 2022: crudo de LA y gas de AM y AU. Hay 17 huecos internos en AV y uno en SH (junio de 2024). Los bloques grises solo indican períodos fuera de la cobertura observada; no prueban cierre de operaciones.",
+    "implicacion": "Conciliar los tres conflictos con la fuente, confirmar el origen de los huecos, completar el catálogo de AB16 y solicitar el precio faltante. Estas acciones mejorarían la trazabilidad y la calidad de la comparación, sin inventar producción.",
+    "limite": "No reemplazar ausencias por cero ni borrar atípicos para mostrar mejoras. Se conservan 52 marcas IQR de crudo y 42 de gas. Cada celda del mapa representa un activo-mes; los colores no equivalen a magnitud de producción.",
+    "fuente": "reportes/auditoria.json, cobertura.csv y data/procesados/produccion_limpia.csv. Mapa: 896 combinaciones posibles = 789 observadas + 18 huecos + 89 fuera de cobertura."
+  }
+]

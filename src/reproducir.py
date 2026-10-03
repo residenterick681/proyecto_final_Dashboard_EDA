@@ -12,6 +12,6 @@ def main():
     figures();print('2/5 Figuras listas.')
     dashboard();print('3/5 Dashboard listo.')
     if not args.sin_notebook:notebook();print('4/5 Notebook ejecutado sin errores.')
-    report();print('5/5 PDF generado en docs/Proyecto_Final_EDA_Ruano.pdf.')
+    report();print('5/5 PDF generado en docs/Proyecto_Final_EDA_Grupo_5.pdf.')
 
 if __name__=='__main__':main()

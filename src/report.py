@@ -8,11 +8,13 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,Table,TableStyle,Image,Preformatted,KeepTogether
 from .pipeline import ROOT
+from .preguntas import build as build_questions
 from .content import QUESTION,STEPS,TECHNICAL,DICTIONARY,decisions
 
 GREEN=colors.HexColor('#145e4a'); INK=colors.HexColor('#213e35'); PALE=colors.HexColor('#edf3ee')
 
 def build(root=ROOT):
+    questions = build_questions(root)
     s=json.loads((root/'reportes/resumen.json').read_text(encoding='utf-8'))
     a=json.loads((root/'reportes/auditoria.json').read_text(encoding='utf-8'))
     links_path=root/'docs/enlaces.json'
@@ -42,11 +44,11 @@ def build(root=ROOT):
     def num(x,n=2):return f'{x:,.{n}f}'
     p('MIACD02P01 | PROGRAMACIÓN Y ANÁLISIS DE DATOS',True);story.append(Spacer(1,35))
     story.append(Paragraph('Producción petrolera<br/>con evidencia y contexto',styles['TitleEDA']))
-    p('<b>Proyecto final: análisis exploratorio y dashboard</b><br/>Erick Leandro Ruano Lara<br/>Corte analítico: producción enero 2022-agosto 2026; precio enero 2021-julio 2026.<br/>Documento preparado el 2 de octubre de 2026 (hora de Ecuador).')
+    p('<b>Proyecto final: análisis exploratorio y dashboard</b><br/>GRUPO 5<br/>Corte analítico: producción enero 2022-agosto 2026; precio enero 2021-julio 2026.<br/>Documento actualizado el 2 de octubre de 2026 (hora de Ecuador).')
     story.append(Spacer(1,20));table(['88,30 millones','51,75%','789 registros'],[['Barriles observados en enero-agosto de 2026.','Crudo concentrado en SA, AU y SH durante ese período.','Claves activo-mes después de consolidar 13 filas redundantes.']],[164,164,164])
-    sub('Pregunta');p(QUESTION)
+    sub('Pregunta principal');p(QUESTION)
     sub('Resultado principal');p(f'En los 14 activos con ocho meses completos en ambos años, la tasa diaria conjunta aumenta <b>{s["cambio_comparable_pct"]:.2f}%</b> entre enero-agosto de 2025 y 2026. Indillana registra una variación de <b>{s["mayor_caida"]["cambio_pct"]:.2f}%</b>. Las diferencias son descriptivas; los archivos no identifican las causas.')
-    sub('Entrega');p('Este documento integra contexto, fuentes, diccionario, siete pasos EDA, ocho apartados técnicos, dashboard, cuatro decisiones y reproducción. El notebook incluye código ejecutado y salidas. El repositorio conserva las tres fuentes originales con SHA-256.')
+    sub('Entrega');p('Este documento integra contexto, fuentes, diccionario, siete pasos EDA, ocho apartados técnicos, dashboard, cinco preguntas complementarias con gráficos, cuatro decisiones y reproducción. El notebook incluye código ejecutado y salidas. El repositorio conserva las tres fuentes originales con SHA-256.')
     p('<b>Repositorio:</b> <link href="'+links['repositorio']+'" color="#145e4a">'+links['repositorio']+'</link>',True)
     if links['dashboard'].startswith('http'):p('<b>Dashboard:</b> <link href="'+links['dashboard']+'" color="#145e4a">'+links['dashboard']+'</link>',True)
     else:p('Dashboard: '+links['dashboard'],True)
@@ -59,6 +61,8 @@ def build(root=ROOT):
         ['eppec_prd_petroleo_acumulada_2026 (2).xlsx','802 filas; 5 columnas con datos; 16 códigos; enero 2022-agosto 2026. Hoja1.','Una clave por año-mes-activo; se conserva la fila de origen.'],
         ['precio-petrleo-crudo-ecu (1).csv','67 precios mensuales, enero 2021-julio 2026; USD por barril.','Clave de mes única. Unión izquierda a producción.'],
         ['activos_nomenclatura.csv','15 códigos y nombres.','Unión muchos-a-uno. AB16 queda sin nombre validado.']],[165,175,152])
+    sub('Cómo se interpreta una mejora')
+    p('En este análisis, una mejora observada del nivel productivo es un aumento de la tasa de crudo por día calendario entre períodos equivalentes y los mismos activos. Una oportunidad de mejora es una prioridad de investigación o de calidad del dato respaldada por la evidencia. Ninguna de las dos demuestra, por sí sola, mayor eficiencia, rentabilidad o éxito de una intervención.')
     sub('Procedencia y supuestos explícitos')
     p('El nombre del XLSX y la ficha de Datos Abiertos Ecuador son compatibles con producción mensual de EP Petroecuador. La ficha describe BPPM y MPC. Se adoptan barriles por mes y miles de pies cúbicos por mes. Los valores suben y bajan dentro del año, por lo que no se calcula una diferencia de un supuesto acumulado anual. La hoja por sí sola no declara unidades ni metodología; esta limitación permanece visible.')
     p('La definición del BCE identifica el precio como promedio ponderado mensual de exportaciones de crudos Oriente y Napo de EP Petroecuador. El CSV entregado explicita USD por barril. Se usa como contexto agregado; no es el precio efectivo de cada activo. No se interpreta precio × producción como facturación.')
@@ -133,6 +137,16 @@ def build(root=ROOT):
     p(f'La variación de la cohorte es <b>+{s["cambio_comparable_pct"]:.2f}%</b>. El cálculo pondera por días calendario (suma de barriles dividida por días distintos), en lugar de dar igual peso a meses de distinta duración. AIT y AB16 no aparecen en ambos períodos completos y se excluyen; no se equiparan sus códigos.')
     p(f'Indillana (IN) registra el mayor descenso absoluto de tasa dentro de esta cohorte: <b>{s["mayor_caida"]["cambio_diario"]:,.2f} barriles/día</b>, equivalente a {s["mayor_caida"]["cambio_pct"]:.2f}%. AV tiene pequeña escala absoluta: su variación porcentual no debe dominar la priorización operativa. Las tasas describen días calendario y no corrigen por días efectivos de operación.')
 
+    for item in questions:
+        page(f'Análisis aplicado | Pregunta {item["numero"]} de 5')
+        sub(item['titulo'])
+        p('<b>Justificación - '+escape(item['justificacion'])+'</b>')
+        figure(item['figura'],480)
+        p('<b>Respuesta basada en los datos:</b> '+escape(item['respuesta']))
+        p('<b>Oportunidad identificada:</b> '+escape(item['implicacion']))
+        p('<b>Alcance y límite:</b> '+escape(item['limite']))
+        p('<b>Fuente y cálculo:</b> '+escape(item['fuente']),True)
+
     for i,chunk in enumerate([decisions(s,a)[:2],decisions(s,a)[2:]]):
         page(f'{11+i}. Paso 7: decisiones sustentadas ({i+1}/2)')
         for d in chunk:
@@ -187,14 +201,14 @@ def build(root=ROOT):
         code(item['sha256'])
     p('Límites: no hay datos de pozos, costos, días operativos, calidad del crudo ni causas de cambios. El precio agregado no representa ingresos de cada activo. Las coberturas administrativas no están documentadas. Las observaciones mensuales son dependientes. Las asociaciones y decisiones no se extrapolan a la producción nacional.')
 
-    target=root/'docs/Proyecto_Final_EDA_Ruano.pdf'
+    target=root/'docs/Proyecto_Final_EDA_Grupo_5.pdf'
     def footer(canvas,doc):
         canvas.saveState();w,hh=A4
         canvas.setStrokeColor(colors.HexColor('#d7e3d9'));canvas.line(42,40,w-42,40)
         canvas.setFont('Helvetica',7);canvas.setFillColor(INK)
-        canvas.drawString(42,27,'EDA PETROLERO | RUANO | MIACD02P01')
+        canvas.drawString(42,27,'EDA PETROLERO | GRUPO 5 | MIACD02P01')
         canvas.drawRightString(w-42,27,f'{doc.page}');canvas.restoreState()
-    doc=SimpleDocTemplate(str(target),pagesize=A4,rightMargin=42,leftMargin=42,topMargin=42,bottomMargin=55,title='Proyecto final: Dashboard EDA de producción petrolera',author='Erick Leandro Ruano Lara')
+    doc=SimpleDocTemplate(str(target),pagesize=A4,rightMargin=42,leftMargin=42,topMargin=42,bottomMargin=55,title='Proyecto final: Dashboard EDA de producción petrolera',author='GRUPO 5')
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
     return target
 

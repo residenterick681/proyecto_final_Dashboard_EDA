@@ -1,13 +1,13 @@
 # proyecto_final_Dashboard_EDA
 
-Proyecto final de Programación y Análisis de Datos (MIACD02P01). **Erick Leandro Ruano Lara.**
+Proyecto final de Programación y Análisis de Datos (MIACD02P01). **GRUPO 5.**
 
 Analiza tres archivos aportados por el usuario: producción mensual por activo, precio mensual del crudo ecuatoriano y catálogo de activos. Conserva los originales, audita la calidad y genera un notebook ejecutado, un informe PDF y un dashboard interactivo.
 
 ## Entrega
 
 - **Dashboard público:** https://residenterick681.github.io/proyecto_final_Dashboard_EDA/
-- **Informe único:** [Proyecto_Final_EDA_Ruano.pdf](docs/Proyecto_Final_EDA_Ruano.pdf), aproximadamente 0,3 MB, por debajo de 20 MB.
+- **Informe único:** [Proyecto_Final_EDA_Grupo_5.pdf](docs/Proyecto_Final_EDA_Grupo_5.pdf), aproximadamente 0,7 MB, por debajo de 20 MB.
 - **Análisis con salidas:** [01_EDA_petroleo.ipynb](notebooks/01_EDA_petroleo.ipynb).
 - **Repositorio:** https://github.com/residenterick681/proyecto_final_Dashboard_EDA
 - **Texto listo para el aula:** [texto_entrega.txt](docs/texto_entrega.txt).
@@ -24,11 +24,13 @@ Para regenerarlo tras ejecutar el análisis: `python -m src.export_powerbi`. Est
 
 Se verificaron los datos, las referencias, los esquemas PBIP/PBIR y la deserialización del modelo mediante las bibliotecas de Microsoft instaladas. **La apertura, actualización DAX y presentación en Power BI Desktop quedan pendientes de comprobación en la aplicación.** El proyecto se entrega sin caché binaria; por eso necesita una primera actualización.
 
+El informe incorpora cinco preguntas adicionales con justificación basada en los datos, respuestas, gráficos y límites de interpretación. Sus resultados y figuras se regeneran desde `src/preguntas.py`.
+
 ## Problema, pregunta y usuario
 
 Un analista de planificación y supervisión de producción necesita distinguir cambios productivos de diferencias de cobertura, duración de los meses y errores de registro.
 
-**¿Cómo cambia la producción de los activos entre meses comparables, dónde se concentra el volumen y qué asociación descriptiva existe entre los cambios del precio y del crudo en una cohorte estable?**
+**¿Qué mejoras y oportunidades de mejora pueden identificarse a partir de las variaciones de producción, al comparar períodos equivalentes y considerar la cobertura y calidad de los datos?**
 
 La unidad es **activo-mes**, no pozo ni persona. Los resultados describen los archivos aportados, no toda la producción nacional. No se infiere causalidad ni se calcula facturación multiplicando volumen producido por un precio agregado de exportación.
 

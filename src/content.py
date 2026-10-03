@@ -1,5 +1,5 @@
 """Textos comunes al informe, al notebook y al dashboard."""
-QUESTION='¿Cómo cambia la producción de los activos entre meses comparables, dónde se concentra el volumen y qué asociación descriptiva existe entre los cambios del precio y del crudo en una cohorte estable?'
+QUESTION='¿Qué mejoras y oportunidades de mejora pueden identificarse a partir de las variaciones de producción, al comparar períodos equivalentes y considerar la cobertura y calidad de los datos?'
 STEPS=[
  ('1','Pregunta de análisis','Problema profesional, usuario, pregunta y alcance.'),
  ('2','Origen y estructura','Fuentes, unidad activo-mes, tipos y diccionario.'),

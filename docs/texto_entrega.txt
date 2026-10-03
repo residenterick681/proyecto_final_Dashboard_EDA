@@ -6,4 +6,4 @@ https://github.com/residenterick681/proyecto_final_Dashboard_EDA
 Dashboard público:
 https://residenterick681.github.io/proyecto_final_Dashboard_EDA/
 
-Archivo adjunto: Proyecto_Final_EDA_Ruano.pdf
+Archivo adjunto: Proyecto_Final_EDA_Grupo_5.pdf
